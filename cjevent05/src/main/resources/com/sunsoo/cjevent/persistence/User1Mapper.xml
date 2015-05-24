@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sunsoo.cjevent.persistence.User1Mapper">
+
+  <cache />
+
+  <!-- To get user's session -->
+  <select id="getUser1" parameterType="User1" resultType="User1">
+    SELECT
+		*
+    FROM USER1
+    WHERE PHONE1 = #{phone1}
+      AND PHONE2 = #{phone2}
+      AND PHONE3 = #{phone3}
+  </select>
+
+  <!-- To check if user_id is redundant or not -->
+  <select id="getUser1Count" parameterType="User1" resultType="int">
+    SELECT
+		COUNT(*)
+    FROM USER1
+    WHERE PHONE1 = #{phone1}
+      AND PHONE2 = #{phone2}
+      AND PHONE3 = #{phone3}
+  </select>
+
+  <!-- To insert into the table-USER1 -->
+  <insert id="insertUser1" parameterType="User1">
+    INSERT INTO USER1
+      (USER_NAME, PHONE1, PHONE2, PHONE3)
+    VALUES
+      (#{user_name}, #{phone1}, #{phone2}, #{phone3})
+  </insert>
+  
+</mapper>
