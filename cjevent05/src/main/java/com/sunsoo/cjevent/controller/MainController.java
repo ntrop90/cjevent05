@@ -26,6 +26,7 @@ public class MainController {
 	// web Main
 	@RequestMapping("/web/main")
 	public String webMain() {
+		/*
 		User1 user = new User1();
 		user.setUser_id(1);
 		user.setUser_name("전선수");
@@ -34,6 +35,7 @@ public class MainController {
 		user.setPhone2("7172");
 		user.setPhone3("7257");
 		user1Service.insertUser1(user);
+		*/
 		return "web/main";
 	}
 	// web Result

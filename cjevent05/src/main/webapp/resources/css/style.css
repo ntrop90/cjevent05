@@ -1,0 +1,49 @@
+@CHARSET "UTF-8";
+body {
+	margin: 0 auto;
+}
+.wrap_cjevent05 {
+	position: relative;
+	min-width: 700px;
+	min-height: 100%;
+	margin: 0 auto;
+}
+.contents {
+	position: relative;
+	width: 700px;
+	margin: 0 auto;
+}
+.event_intro {
+	position: relative;
+	height: 646px;
+	line-height: 0px;
+	background: url("../images/intro.png") no-repeat 0 0;
+}
+.event1 {
+	position: relative;
+	height: 1420px;
+	line-height: 0px;
+	background: url("../images/event1.png") no-repeat 0 0;
+}
+.event2 {
+	position: relative;
+	height: 482px;
+	line-height: 0px;
+	background: url("../images/event2.png") no-repeat 0 0;
+}
+.event_get {
+	position: relative;
+	height: 202px;
+	line-height: 0px;
+	background: url("../images/get.png") no-repeat 0 0;
+}
+.event_btn1 {
+	position: absolute;
+	left: 395px;
+	top: 418px;
+}
+.event_btn2 {
+	position: absolute;
+	left: 395px;
+	top: 492px;
+}
