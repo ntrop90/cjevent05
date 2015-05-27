@@ -1,6 +1,12 @@
 @CHARSET "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 body {
 	margin: 0 auto;
+	font-family: "Nanum Gothic";
+	font-weight: 400;
+}
+*:focus {
+	outline: 0;
 }
 .wrap_cjevent05 {
 	position: relative;
@@ -46,4 +52,67 @@ body {
 	position: absolute;
 	left: 395px;
 	top: 492px;
+}
+.event_btn3 {
+	position: absolute;
+	left: 201px; 
+	top:  808px;
+}
+.event_phone {
+	position: absolute;
+	left: 275px;
+	top: 735px;
+	width: 350px;
+	height: 35px;
+	background-color: transparent;
+	text-align: center;
+	color: #24a4a3;
+	font-size: 1.0em;
+	border: none;
+	z-index: 1000;
+}
+.event_phone::-webkit-input-placeholder {
+	color: #24a4a3;
+	opacity: 1 !important;
+}
+.event_phone:-moz-placeholder {
+	color: #24a4a3;
+	opacity: 1 !important;
+}
+.event_phone::-moz-placeholder {
+	color: #24a4a3;
+	opacity: 1 !important;
+}
+.event_phone:-ms-input-placeholder {
+	color: #24a4a3;
+	opacity: 1 !important;
+}
+.event_code {
+	position: absolute;
+	left: 300px;
+	top: 236px;
+	width: 200px;
+	height: 42px;
+	background-color: transparent;
+	text-align: center;
+	color: #153461;
+	font-size: 1.0em;
+	border: none;
+	z-index: 1000;
+}
+.event_code::-webkit-input-placeholder {
+	color: #153461;
+	opacity: 0.60 !important;
+}
+.event_code:-moz-placeholder {
+	color: #153461;
+	opacity: 0.60 !important;
+}
+.event_code::-moz-placeholder {
+	color: #153461;
+	opacity: 0.60 !important;
+}
+.event_code:-ms-input-placeholder {
+	color: #153461;
+	opacity: 0.60 !important;
 }

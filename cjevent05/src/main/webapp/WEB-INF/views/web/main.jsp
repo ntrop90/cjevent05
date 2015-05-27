@@ -5,6 +5,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="<c:url value="http://code.jquery.com/jquery-latest.min.js" />"></script>
+<script src="<c:url value="/resources/js/event.js" />"></script>
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/style.css" />">
 <title>Web Main</title>
 </head>
@@ -18,10 +20,15 @@
 				<a href="#" class="event_btn2">
 					<img src="<c:url value="/resources/images/goBtn2.png" />">
 				</a>
-			</div>
+			</div> <!--  24a4a3 left:257 width:351 top:1383 height:35 -->
 			<div class="event1">
+				<input id="phone" type="text" maxlength="11" placeholder="'-'없이 숫자만 입력해 주세요"  class="event_phone">
+				<a href="#" id="checkRecipe" class="event_btn3">
+					<img src="<c:url value="/resources/images/goBtn3.png" />">
+				</a>
 			</div>
 			<div class="event2">
+				<input type="text" maxlength="10" placeholder="응모번호를 입력하세요"  class="event_code">
 			</div>
 			<div class="event_get">
 			</div>
