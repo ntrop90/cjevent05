@@ -43,7 +43,11 @@ public class MainController {
 	public String webResult(@ModelAttribute User1 user) {
 		return "web/result";
 	}
-	
+	// web Result check(문자발송 성공여부 임시페이지)
+		@RequestMapping(value = "/web/resultcheck")
+		public String Resultcheck(@ModelAttribute User1 user) {
+			return "web/resultcheck";
+		}
 	// mobile Main
 	@RequestMapping("/m/main")
 	public String mMain() {
