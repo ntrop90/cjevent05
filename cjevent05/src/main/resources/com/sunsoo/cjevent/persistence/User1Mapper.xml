@@ -28,9 +28,9 @@
   <!-- To insert into the table-USER1 -->
   <insert id="insertUser1" parameterType="User1">
     INSERT INTO USER1
-      (USER_NAME, PHONE1, PHONE2, PHONE3)
+      (USER_NAME, REMOTE_PHONE)
     VALUES
-      (#{user_name}, #{phone1}, #{phone2}, #{phone3})
+      (#{user_name}, #{remote_phone})
   </insert>
   
 </mapper>

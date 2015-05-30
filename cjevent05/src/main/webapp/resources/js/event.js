@@ -2,6 +2,18 @@
  * created by Sun-Soo Jeon
  */
 $(function () {
+	$('#sunsoo-web-scroll1').click(function (event) {
+		$(document).scrollTop(734);
+	});
+});
+
+$(function () {
+	$('#sunsoo-web-scroll2').click(function (event) {
+		$(document).scrollTop(2010);
+	});
+});
+
+$(function () {
 	$('#remote_phone').keypress(function (event) {
 		var p = $('#remote_phone').val();
 		if(p.length == 0) {

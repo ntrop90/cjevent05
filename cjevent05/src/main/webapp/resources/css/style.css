@@ -8,55 +8,66 @@ body {
 *:focus {
 	outline: 0;
 }
-.wrap_cjevent05 {
+.sunsoo-web-wrapper {
 	position: relative;
-	min-width: 700px;
+	min-width: 980px;
 	min-height: 100%;
 	margin: 0 auto;
 }
-.contents {
+.sunsoo-web-contents {
 	position: relative;
-	width: 700px;
+	width: 980px;
 	margin: 0 auto;
 }
-.event_intro {
+.sunsoo-web-event-intro {
 	position: relative;
-	height: 646px;
+	height: 696px;
 	line-height: 0px;
-	background: url("../images/intro.png") no-repeat 0 0;
+	background: url("../images/bgWebEventIntro.png") no-repeat 0 0;
 }
-.event1 {
+.sunsoo-web-event1 {
 	position: relative;
-	height: 1420px;
+	height: 1290px;
 	line-height: 0px;
-	background: url("../images/event1.png") no-repeat 0 0;
+	background: url("../images/bgWebEvent1.png") no-repeat 0 0;
 }
-.event2 {
+.sunsoo-web-event2 {
 	position: relative;
-	height: 482px;
+	height: 568px;
 	line-height: 0px;
-	background: url("../images/event2.png") no-repeat 0 0;
+	background: url("../images/bgWebEvent2.png") no-repeat 0 0;
 }
-.event_get {
+.sunsoo-web-event-share {
 	position: relative;
-	height: 202px;
+	height: 117px;
 	line-height: 0px;
-	background: url("../images/get.png") no-repeat 0 0;
+	background: url("../images/bgWebEventShare.png") no-repeat 0 0;
 }
-.event_btn1 {
+.sunsoo-web-event-btn1-scroll {
 	position: absolute;
-	left: 395px;
-	top: 418px;
+	left: 177px;
+	top: 636px;
 }
-.event_btn2 {
-	position: absolute;
-	left: 395px;
-	top: 492px;
+#sunsoo-web-scroll1 {
+	cursor: pointer;
 }
-.event_btn3 {
+.sunsoo-web-event-btn2-scroll {
 	position: absolute;
-	left: 201px; 
-	top:  808px;
+	left: 509px;
+	top: 636px;
+}
+#sunsoo-web-scroll2 {
+	cursor: pointer;
+}
+.sunsoo-web-event-btn1-check {
+	position: absolute;
+	left: 262px; 
+	top:  522px;
+}
+.sunsoo-web-event-btn2-check {
+	position: absolute;
+	left: 362px; 
+	top:  459px;
 }
 .event_phone {
 	position: absolute;
@@ -87,32 +98,33 @@ body {
 	color: #24a4a3;
 	opacity: 1 !important;
 }
-.event_code {
+.sunsoo-web-event-code {
 	position: absolute;
-	left: 300px;
-	top: 236px;
-	width: 200px;
-	height: 42px;
+	left: 142px;
+	top: 463px;
+	width: 220px;
+	height: 50px;
+	padding: 0;
 	background-color: transparent;
 	text-align: center;
-	color: #153461;
+	color: #4d3524;
 	font-size: 1.0em;
 	border: none;
 	z-index: 1000;
 }
-.event_code::-webkit-input-placeholder {
-	color: #153461;
+.sunsoo-web-event-code::-webkit-input-placeholder {
+	color: #4d3524;
 	opacity: 0.60 !important;
 }
-.event_code:-moz-placeholder {
-	color: #153461;
+.sunsoo-web-event-code:-moz-placeholder {
+	color: #4d3524;
 	opacity: 0.60 !important;
 }
-.event_code::-moz-placeholder {
-	color: #153461;
+.sunsoo-web-event-code::-moz-placeholder {
+	color: #4d3524;
 	opacity: 0.60 !important;
 }
-.event_code:-ms-input-placeholder {
-	color: #153461;
+.sunsoo-web-event-code:-ms-input-placeholder {
+	color: #4d3524;
 	opacity: 0.60 !important;
 }
