@@ -6,6 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script src="<c:url value="http://code.jquery.com/jquery-latest.min.js" />"></script>
+<script type='text/javascript' src='http://demos.flesler.com/jquery/scrollTo/js/jquery.scrollTo-min.js'></script>
 <script src="<c:url value="/resources/js/event.js" />"></script>
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/style.css" />">
 <title>Web Main</title>
@@ -25,20 +26,22 @@
 	<div class="sunsoo-web-wrapper">
 		<div class="sunsoo-web-contents">
 			<div class="sunsoo-web-event-intro">
-				<a id="sunsoo-web-scroll1" class="sunsoo-web-event-btn1-scroll">
+				<a  class="sunsoo-web-event-btn1-scroll"
+				 href="#event1" onclick="$.scrollTo( $('#event1'), 800 ); return false;" class="scroll">
 					<img src="<c:url value="/resources/images/btnGoWebEvent1.png" />">
 				</a>
-				<a id="sunsoo-web-scroll2" class="sunsoo-web-event-btn2-scroll">
+				<a  class="sunsoo-web-event-btn2-scroll"
+				href="#event2" onclick="$.scrollTo( $('#event2'), 800 ); return false;" class="scroll">
 					<img src="<c:url value="/resources/images/btnGoWebEvent2.png" />">
 				</a>
 			</div>
-			<div class="sunsoo-web-event1">
+			<div class="sunsoo-web-event1" id="event1">
 				<!--<input type="text" name="remote_phone" id="remote_phone" maxlength="13" placeholder="'-'와 함께 숫자만 입력해 주세요" class="event_phone">-->
 				<a href="#" id="checkRecipe" class="sunsoo-web-event-btn1-check">
 					<img src="<c:url value="/resources/images/btnWebEvent1.png" />">
 				</a>
 			</div>
-			<div class="sunsoo-web-event2">
+			<div class="sunsoo-web-event2" id="event2">
 				<input type="text" maxlength="10" placeholder="응모번호를 입력하세요"  class="sunsoo-web-event-code">
 				<a href="#" id="checkRecipe" class="sunsoo-web-event-btn2-check">
 					<img src="<c:url value="/resources/images/btnWebEvent2.png" />">
