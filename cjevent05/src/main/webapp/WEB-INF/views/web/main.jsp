@@ -8,6 +8,47 @@
 <script src="<c:url value="http://code.jquery.com/jquery-latest.min.js" />"></script>
 <script type='text/javascript' src='http://demos.flesler.com/jquery/scrollTo/js/jquery.scrollTo-min.js'></script>
 <script src="<c:url value="/resources/js/event.js" />"></script>
+	<script type="text/javascript" src="/cjevent/resources/images/jquery.alsEN-1.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() 
+			{
+				$("#lista1").als({
+					visible_items: 1,
+					scrolling_items: 1,
+					orientation: "horizontal",
+					circular: "yes",
+					autoscroll: "no",
+					interval: 5000,
+					direction: "right"
+				});
+				
+				$("#lista2").als({
+					visible_items: 2,
+					scrolling_items: 1,
+					orientation: "vertical",
+					circular: "no",
+					autoscroll: "no"
+				});
+				
+				//logo hover
+				$("#logo_img").hover(function()
+				{
+					$(this).attr("src","resources/als_logo_hover212x110.png");
+				},function()
+				{
+					$(this).attr("src","resources/als_logo212x110.png");
+				});
+				
+				//logo click
+				$("#logo_img").click(function()
+				{
+					location.href = "http://als.musings.it/index.php";
+				});
+				
+				$("a[href^='http://']").attr("target","_blank");
+				$("a[href^='http://als']").attr("target","_self");
+			});
+		</script>
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/style.css" />">
 <title>Web Main</title>
 </head>
@@ -38,7 +79,23 @@
 			</div>
 			
 			<div class="sunsoo-web-event1" id="event1">
-			
+				<div id="lista1" class="als-container">
+				<span class="als-prev"><img src="/cjevent/resources/images/thin_left_arrow_333.png" alt="prev" title="previous" /></span>
+				<div class="als-viewport">
+					<ul class="als-wrapper">
+						<li class="als-item"><img src="/cjevent/resources/images/als-images/calculator.png" alt="calculator" title="calculator" />calculator</li>
+						<li class="als-item"><img src="/cjevent/resources/images/als-images/light_bulb.png" alt="light bulb" title="light bulb" />light bulb</li>
+						<li class="als-item"><img src="/cjevent/resources/images/als-images/card.png" alt="card" title="card" />card</li>
+						<li class="als-item"><img src="/cjevent/resources/images/als-images/chess.png" alt="chess" title="chess" />chess</li>
+						<li class="als-item"><img src="/cjevent/resources/images/als-images/clock.png" alt="alarm clock" title="alarm clock" />alarm clock</li>
+						<li class="als-item"><img src="/cjevent/resources/images/als-images/cut.png" alt="scissors" title="scissors" /></li>
+						<li class="als-item"><img src="/cjevent/resources/images/als-images/heart.png" alt="heart" title="heart" /></li>
+						<li class="als-item"><img src="/cjevent/resources/images/als-images/map.png" alt="pin" title="pin" /></li>
+						<li class="als-item"><img src="/cjevent/resources/images/als-images/mobile_phone.png" alt="mobile phone" title="mobile phone" /></li>
+					</ul>
+				</div>
+				<span class="als-next"><img src="/cjevent/resources/images/thin_right_arrow_333.png" alt="next" title="next" /></span>
+			</div>
 				<!--<input type="text" name="remote_phone" id="remote_phone" maxlength="13" placeholder="'-'와 함께 숫자만 입력해 주세요" class="event_phone">-->
 				<a href="#" id="checkRecipe" class="sunsoo-web-event-btn1-check">
 					<img src="<c:url value="/resources/images/btnWebEvent1.png" />">
