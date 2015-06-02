@@ -47,6 +47,7 @@ body {
 	position: absolute;
 	left: 177px;
 	top: 636px;
+	cursor: pointer;
 }
 #sunsoo-web-scroll1 {
 	cursor: pointer;
@@ -55,6 +56,7 @@ body {
 	position: absolute;
 	left: 509px;
 	top: 636px;
+	cursor: pointer;
 }
 #sunsoo-web-scroll2 {
 	cursor: pointer;
@@ -62,7 +64,7 @@ body {
 .sunsoo-web-event-btn1-check {
 	position: absolute;
 	left: 262px; 
-	top:  1222px;
+	top:  526px;
 }
 .sunsoo-web-event-btn2-check {
 	position: absolute;
@@ -129,97 +131,97 @@ body {
 	opacity: 0.60 !important;
 }
 
-
-/* main */
-#main_visual .visual_in {
- position: absolute;
- }
-.visual {
- position: absolute;
- top :160px;
- left: 40px;
- height: 388px; /* 모든 자식요소가 absolute 처리되었으므로 높이값이 반드시 필요함 */
+/* regarding step1~3 */
+.sunsoo-step ul {
+	list-style: none;
 }
-.visual li {
- display: none;
- position: absolute;
- top: 0;
- left: 0;
+#sunsoo-step1-div {
+	display: block;
 }
-.visual li.list0 {
- display: block;
+#sunsoo-step2-div {
+	display: none;
 }
-.visual_in .bt_left {    /* 이전버튼 */
- position:absolute;
- top: 340px;
- left:70px;
+#sunsoo-step3-div {
+	display: none;
 }
-.visual_in .bt_right {  /* 다음버튼 */
- position:absolute;
- top: 340px;
- left: 290px;
+#sunsoo-step1-ul {
+	position: absolute;
+	top: 150px;
+	left: 40px;
+	height: 388px;
 }
-
-/* main */
-#main_visual .visual_in {
- position: absolute;
- }
-.visual {
- position: absolute;
- top :160px;
- left: 40px;
- height: 388px; /* 모든 자식요소가 absolute 처리되었으므로 높이값이 반드시 필요함 */
+.sunsoo-step1-li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
 }
-.visual li {
- display: none;
- position: absolute;
- top: 0;
- left: 0;
+#sunsoo-step1-li-0 {
+	display: block;
 }
-.visual li.list0 {
- display: block;
+#btn-step1-left {
+	position: absolute;
+	top: 330px;
+	left: 70px;
+	cursor: pointer;
 }
-.visual_in .bt_left {    /* 이전버튼 */
- position:absolute;
- top: 340px;
- left:70px;
+#btn-step1-right {
+	position: absolute;
+	top: 330px;
+	left: 290px;
+	cursor: pointer;
 }
-.visual_in .bt_right {  /* 다음버튼 */
- position:absolute;
- top: 340px;
- left: 290px;
+#sunsoo-step2-ul {
+	position: absolute;
+	top: 150px;
+	left: 340px;
+	height: 388px;
 }
-
-
-
-#Pop{
-	 position:absolute; 
-	 left:-100px; 
-	 top:-300px; 
-	 width:100px; 
-	 height:100px; 
-	 display:none;
-	 color: #000;
-
- }
- #Pop2{
-	 position:absolute; 
-	 left:-100px; 
-	 top:-300px; 
-	 width:100px; 
-	 height:100px; 
-	 display:none;
-	 color: #000;
-
- }
- .popupclose{
-  position:absolute; 
-  left :605px;
-  top:20px;
- }
-.popupcheck{
-display:none;
-  position:absolute; 
-   left :225px;
-   top:495px;
- }
+.sunsoo-step2-li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+#sunsoo-step2-li-0 {
+	display: block;
+}
+#btn-step2-left {
+	position: absolute;
+	top: 330px;
+	left: 365px;
+	cursor: pointer;
+}
+#btn-step2-right {
+	position: absolute;
+	top: 330px;
+	left: 585px;
+	cursor: pointer;
+}
+#sunsoo-step3-ul {
+	position: absolute;
+	top: 150px;
+	left: 640px;
+	height: 388px;
+}
+.sunsoo-step3-li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+#sunsoo-step3-li-0 {
+	display: block;
+}
+#btn-step3-left {
+	position: absolute;
+	top: 330px;
+	left: 670px;
+	cursor: pointer;
+}
+#btn-step3-right {
+	position: absolute;
+	top: 330px;
+	left: 890px;
+	cursor: pointer;
+}
