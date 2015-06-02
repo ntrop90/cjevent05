@@ -62,7 +62,7 @@ body {
 .sunsoo-web-event-btn1-check {
 	position: absolute;
 	left: 262px; 
-	top:  522px;
+	top:  1222px;
 }
 .sunsoo-web-event-btn2-check {
 	position: absolute;
@@ -128,3 +128,98 @@ body {
 	color: #4d3524;
 	opacity: 0.60 !important;
 }
+
+
+/* main */
+#main_visual .visual_in {
+ position: absolute;
+ }
+.visual {
+ position: absolute;
+ top :160px;
+ left: 40px;
+ height: 388px; /* 모든 자식요소가 absolute 처리되었으므로 높이값이 반드시 필요함 */
+}
+.visual li {
+ display: none;
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+.visual li.list0 {
+ display: block;
+}
+.visual_in .bt_left {    /* 이전버튼 */
+ position:absolute;
+ top: 340px;
+ left:70px;
+}
+.visual_in .bt_right {  /* 다음버튼 */
+ position:absolute;
+ top: 340px;
+ left: 290px;
+}
+
+/* main */
+#main_visual .visual_in {
+ position: absolute;
+ }
+.visual {
+ position: absolute;
+ top :160px;
+ left: 40px;
+ height: 388px; /* 모든 자식요소가 absolute 처리되었으므로 높이값이 반드시 필요함 */
+}
+.visual li {
+ display: none;
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+.visual li.list0 {
+ display: block;
+}
+.visual_in .bt_left {    /* 이전버튼 */
+ position:absolute;
+ top: 340px;
+ left:70px;
+}
+.visual_in .bt_right {  /* 다음버튼 */
+ position:absolute;
+ top: 340px;
+ left: 290px;
+}
+
+
+
+#Pop{
+	 position:absolute; 
+	 left:-100px; 
+	 top:-300px; 
+	 width:100px; 
+	 height:100px; 
+	 display:none;
+	 color: #000;
+
+ }
+ #Pop2{
+	 position:absolute; 
+	 left:-100px; 
+	 top:-300px; 
+	 width:100px; 
+	 height:100px; 
+	 display:none;
+	 color: #000;
+
+ }
+ .popupclose{
+  position:absolute; 
+  left :605px;
+  top:20px;
+ }
+.popupcheck{
+display:none;
+  position:absolute; 
+   left :225px;
+   top:495px;
+ }
