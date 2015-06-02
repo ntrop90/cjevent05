@@ -60,7 +60,13 @@
 				<p><img src="<c:url value="/resources/images/input_private.png" />"></p>
 				<div class="ss-recipe-close2"></div>
 				<div class="ss-recipe-confirm2">
-					<input type="submit" nmae="submit1" value="경품받기">
+				<script type="text/javascript">
+					function submitform()
+					{
+					  document.SMSFORM.submit();
+					}
+					</script>
+					<input type="button" nmae="submit1" value="경품받기" onclick="submitform()">
 				</div>
 			</div>
 		</div>
