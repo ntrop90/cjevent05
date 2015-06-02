@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sunsoo.cjevent.persistence.EventUserDoneMapper">
+	<select id="getUserCount" parameterType="EventUserDone" resultType="int">
+    SELECT
+		COUNT(*)
+    FROM
+    	SS_EVENT_USER_DONE
+    WHERE
+    	REMOTE_PHONE = #{remote_phone}
+    </select>
+    
+    <insert id="insertEvent1UserDone" parameterType="EventUserDone">
+    INSERT INTO SS_EVENT_USER_DONE
+    (REMOTE_PHONE, EVENT1_CNT)
+    VALUES
+    (#{remote_phone}, #{event1_cnt})
+    </insert>
+
+    <update id="updateEvent1UserDone" parameterType="EventUserDone">
+    UPDATE SS_EVENT_USER_DONE
+    SET
+    	EVENT1_CNT = EVENT1_CNT + 1
+    WHERE
+    	REMOTE_PHONE = #{remote_phone}
+    </update>
+    
+    <select id="getEvent1Count" parameterType="EventUserDone" resultType="int">
+    SELECT
+    	EVENT1_CNT
+    FROM
+    	SS_EVENT_USER_DONE
+    WHERE
+    	REMOTE_PHONE = #{remote_phone}
+    </select>
+
+</mapper>

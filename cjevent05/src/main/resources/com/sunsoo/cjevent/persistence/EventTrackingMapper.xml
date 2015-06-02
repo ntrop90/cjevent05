@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sunsoo.cjevent.persistence.EventTrackingMapper">
+    <update id="updateTrackingEvent1Count">
+    UPDATE SS_EVENT_TRACKING
+    SET
+    	EVENT1_CNT = EVENT1_CNT + 1
+	WHERE
+		REG_DATE = CONVERT(DATE, GETDATE())
+    </update>
+
+    <update id="updateTrackingEvent1CountAndDist">
+    UPDATE SS_EVENT_TRACKING
+    SET
+    	EVENT1_CNT = EVENT1_CNT + 1, EVNET1_DIST = EVENT1_DIST + 1
+	WHERE
+		REG_DATE = CONVERT(DATE, GETDATE())
+    </update>
+</mapper>
