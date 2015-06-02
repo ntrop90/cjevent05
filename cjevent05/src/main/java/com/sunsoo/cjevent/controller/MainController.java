@@ -55,6 +55,11 @@ public class MainController {
 	public String Resultcheck(@ModelAttribute User1 user) {
 		return "web/resultcheck";
 	}
+	// event1 레시피확인하기 페이지
+	@RequestMapping(value = "/web/step_result")
+	public String step_result(@ModelAttribute User1 user) {
+		return "web/step_result";
+	}
 	// mobile Main
 	@RequestMapping("/m/main")
 	public String mMain() {

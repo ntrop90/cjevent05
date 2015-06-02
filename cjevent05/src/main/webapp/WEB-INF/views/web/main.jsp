@@ -10,49 +10,64 @@
 <script src="<c:url value="/resources/js/event.js" />"></script>
 	<script type="text/javascript" src="/cjevent/resources/images/jquery.alsEN-1.0.min.js"></script>
 		<script type="text/javascript">
-			$(document).ready(function() 
-			{
-				$("#lista1").als({
-					visible_items: 1,
-					scrolling_items: 1,
-					orientation: "horizontal",
-					circular: "yes",
-					autoscroll: "no",
-					interval: 5000,
-					direction: "right"
-				});
-				
-				$("#lista2").als({
-					visible_items: 2,
-					scrolling_items: 1,
-					orientation: "vertical",
-					circular: "no",
-					autoscroll: "no"
-				});
-				
-				//logo hover
-				$("#logo_img").hover(function()
-				{
-					$(this).attr("src","resources/als_logo_hover212x110.png");
-				},function()
-				{
-					$(this).attr("src","resources/als_logo212x110.png");
-				});
-				
-				//logo click
-				$("#logo_img").click(function()
-				{
-					location.href = "http://als.musings.it/index.php";
-				});
-				
-				$("a[href^='http://']").attr("target","_blank");
-				$("a[href^='http://als']").attr("target","_self");
-			});
+		old=0;
+		num=0;
+		function visual(){
+		 num++;
+		 if(num==4){   /* 이미지의 총 개수 */
+		  num = 0;
+		 }
+		 $(".visual li").eq(old).stop(true,true).fadeOut(1000);
+		 $(".visual li").eq(num).stop(true,true).fadeIn(1000);
+		  
+		 
+		 old=num; 
+		 
+		}
+		//auto = setInterval("visual()", 3000);
+
+		$(document).ready(function(){
+		 $("#main_visual .visual_in").hover(function(){
+		  clearInterval(auto);
+		 }, function(){
+		  //auto = setInterval("visual()", 3000);
+		 });
+		 /*좌우버튼 클릭시*/
+		 $(".bt_right").click(function(){
+		  num=old+1;
+		  snum=$(".visual li").length; /*이미지 li의 개수선언 */
+		  if(num<snum){ /*num : 이미지전체개수보다 적으면 수행*/
+		   $(".visual li").eq(old).stop(true,true).fadeOut(300);
+		   $(".visual li").eq(num).fadeIn(300);
+		  
+		   old=num;
+		  }
+		 });
+
+		 $(".bt_left").click(function(){
+		  num=old-1;
+		 
+		  if(num>=0){
+		   $(".visual li").eq(old).stop(true,true).fadeOut(300);
+		   $(".visual li").eq(num).fadeIn(300);
+		  
+		   old=num;
+		  }
+		 });
+		});
+		
+		</script>
 		</script>
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/style.css" />">
 <title>Web Main</title>
 </head>
 <body>
+	<div id="loading_page">로딩중</div>
+	<div id="content_page" style="display:none">
+	<script type="text/javascript">
+    document.getElementById('loading_page').style.display="none";
+    document.getElementById('content_page').style.display="";
+</script>
 
 	<form name="SMSFORM" method="post" action="http://www.okmunja.co.kr/Remote/RemoteMms.html">
 	
@@ -79,31 +94,50 @@
 			</div>
 			
 			<div class="sunsoo-web-event1" id="event1">
-				<div id="lista1" class="als-container">
-				<span class="als-prev"><img src="/cjevent/resources/images/thin_left_arrow_333.png" alt="prev" title="previous" /></span>
-				<div class="als-viewport">
-					<ul class="als-wrapper">
-						<li class="als-item"><img src="/cjevent/resources/images/als-images/calculator.png" alt="calculator" title="calculator" />calculator</li>
-						<li class="als-item"><img src="/cjevent/resources/images/als-images/light_bulb.png" alt="light bulb" title="light bulb" />light bulb</li>
-						<li class="als-item"><img src="/cjevent/resources/images/als-images/card.png" alt="card" title="card" />card</li>
-						<li class="als-item"><img src="/cjevent/resources/images/als-images/chess.png" alt="chess" title="chess" />chess</li>
-						<li class="als-item"><img src="/cjevent/resources/images/als-images/clock.png" alt="alarm clock" title="alarm clock" />alarm clock</li>
-						<li class="als-item"><img src="/cjevent/resources/images/als-images/cut.png" alt="scissors" title="scissors" /></li>
-						<li class="als-item"><img src="/cjevent/resources/images/als-images/heart.png" alt="heart" title="heart" /></li>
-						<li class="als-item"><img src="/cjevent/resources/images/als-images/map.png" alt="pin" title="pin" /></li>
-						<li class="als-item"><img src="/cjevent/resources/images/als-images/mobile_phone.png" alt="mobile phone" title="mobile phone" /></li>
-					</ul>
-				</div>
-				<span class="als-next"><img src="/cjevent/resources/images/thin_right_arrow_333.png" alt="next" title="next" /></span>
+				  <div id="main_visual">
+						   <div class="visual_in">
+							    <div class="visual">
+							     <li class="list0"><a href="#"><img src="/cjevent/resources/images/step1_default.png" alt=""></a></li>
+							     <li class="list1"><a href="#"><img src="/cjevent/resources/images/step1_mom.png" alt=""></a></li>
+							     <li class="list2"><a href="#"><img src="/cjevent/resources/images/step1_dad.png" alt=""></a></li>
+							     <li class="list3"><a href="#"><img src="/cjevent/resources/images/step1_child.png" alt=""></a></li>
+							    </div>
+						    <div> <!--좌우버튼-->
+							     <a class="bt_left" href="#none"><img src="/cjevent/resources/images/event_arrow_left.png" alt="이전보기"></a>
+							     <a class="bt_right" href="#none"><img src="/cjevent/resources/images/event_arrow_right.png" alt="다음보기"></a>
+						    </div>
+						   </div>
+				 </div>
+				 
+				
 			</div>
+			
 				<!--<input type="text" name="remote_phone" id="remote_phone" maxlength="13" placeholder="'-'와 함께 숫자만 입력해 주세요" class="event_phone">-->
-				<a href="#" id="checkRecipe" class="sunsoo-web-event-btn1-check">
-					<img src="<c:url value="/resources/images/btnWebEvent1.png" />">
-				</a>
+				<a href="javascript:ViewLayer();" class="sunsoo-web-event-btn1-check" >
+					<img src="<c:url value="/resources/images/btnWebEvent1.png"/>"></a>
+					
+					<div id="Pop">
+   						<img src="/cjevent/resources/images/dad_01_hotdog.png"/>
+   							<div class="popupclose">
+   								<img src="/cjevent/resources/images/btn_close.png" onclick="close();" />
+   							</div>
+   							<div class="popupcheck">
+   								<img src="/cjevent/resources/images/btn_check.png" onclick="ViewLayer2();">	
+							</div>
+				</div>
+				<div id="Pop2">
+   						<img src="/cjevent/resources/images/input_private.png" />	
+				</div>
+					
+				
 			</div>
+			
+			</form>
+			
+			
 			<div class="sunsoo-web-event2" id="event2">
 				<input type="text" maxlength="10" placeholder="응모번호를 입력하세요"  class="sunsoo-web-event-code">
-				<a href="#" id="checkRecipe" class="sunsoo-web-event-btn2-check">
+				<a href="#" id="checkRecipe" class="sunsoo-web-event-btn2-check" >
 					<img src="<c:url value="/resources/images/btnWebEvent2.png" />">
 				</a>
 			</div>
@@ -130,6 +164,6 @@
 			</div> x: 395px;  y: 418px; 492px; -->
 		</div>
 	</div>
-	</form>
+	
 </body>
 </html>

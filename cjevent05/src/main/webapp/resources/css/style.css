@@ -62,7 +62,7 @@ body {
 .sunsoo-web-event-btn1-check {
 	position: absolute;
 	left: 262px; 
-	top:  522px;
+	top:  1222px;
 }
 .sunsoo-web-event-btn2-check {
 	position: absolute;
@@ -129,76 +129,97 @@ body {
 	opacity: 0.60 !important;
 }
 
-.als-container {
-	position: relative;
-	margin: 0px auto;
+
+/* main */
+#main_visual .visual_in {
+ position: absolute;
+ }
+.visual {
+ position: absolute;
+ top :160px;
+ left: 40px;
+ height: 388px; /* 모든 자식요소가 absolute 처리되었으므로 높이값이 반드시 필요함 */
+}
+.visual li {
+ display: none;
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+.visual li.list0 {
+ display: block;
+}
+.visual_in .bt_left {    /* 이전버튼 */
+ position:absolute;
+ top: 340px;
+ left:70px;
+}
+.visual_in .bt_right {  /* 다음버튼 */
+ position:absolute;
+ top: 340px;
+ left: 290px;
 }
 
-.als-viewport {
-	top: 270px;
-	width:100px;
-	right:100px;
-	position: relative;
-	overflow: hidden;
-	margin: 0px auto;
+/* main */
+#main_visual .visual_in {
+ position: absolute;
+ }
+.visual {
+ position: absolute;
+ top :160px;
+ left: 40px;
+ height: 388px; /* 모든 자식요소가 absolute 처리되었으므로 높이값이 반드시 필요함 */
+}
+.visual li {
+ display: none;
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+.visual li.list0 {
+ display: block;
+}
+.visual_in .bt_left {    /* 이전버튼 */
+ position:absolute;
+ top: 340px;
+ left:70px;
+}
+.visual_in .bt_right {  /* 다음버튼 */
+ position:absolute;
+ top: 340px;
+ left: 290px;
 }
 
-.als-wrapper {
-	position: relative;
-	list-style: none;
-}
 
-.als-item {
-	top: 0px;
-	position: relative;
-	display: block;
-	text-align: center;
-	cursor: pointer;
-	float: left;
-}
 
-.als-prev, .als-next {
-	position: absolute;
-	cursor: pointer;
-	clear: both;
-}
+#Pop{
+	 position:absolute; 
+	 left:-100px; 
+	 top:-300px; 
+	 width:100px; 
+	 height:100px; 
+	 display:none;
+	 color: #000;
 
-#lista1 {
-	
-	margin: 60px auto 80px auto;
+ }
+ #Pop2{
+	 position:absolute; 
+	 left:-100px; 
+	 top:-300px; 
+	 width:100px; 
+	 height:100px; 
+	 display:none;
+	 color: #000;
 
-}
-
-#lista1 .als-item {
-	
-	margin: 0px 30px;
-	min-height: 3000px;
-	min-width: 128px;
-	
-}
-
-#lista1 .als-item img {
-
-	position: relative;
-	display: block;
-	vertical-align: middle;
-	margin-bottom: 8px;
-}
-
-#lista1 .als-prev, #lista1 .als-next {
-	top: 258px;
-	width: 15px;
-	height: 22px;
-}
-
-#lista1 .als-prev {
-	top: 340px;
-	left: 70px;
-	heigtt : 100px;
-}
-
-#lista1 .als-next {
-	top: 340px;
-	right: 680px;
-}
-
+ }
+ .popupclose{
+  position:absolute; 
+  left :605px;
+  top:20px;
+ }
+.popupcheck{
+display:none;
+  position:absolute; 
+   left :225px;
+   top:495px;
+ }
