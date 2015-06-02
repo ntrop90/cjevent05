@@ -64,7 +64,8 @@ $(function () {
 		}
 	});	
 	$('#btn-step3-left').click(function (event) {
-		if(step3Idx == 0) {
+		if(step3Idx <= 0) {
+			step3Idx = 0;
 			return false;
 		}
 		else {
@@ -74,9 +75,18 @@ $(function () {
 		}
 	});
 	$('#btn-step3-right').click(function (event) {
-		if(step3Idx == 7 && step1Idx == 1) return false;
-		else if(step3Idx == 3 && step1Idx == 2) return false;
-		else if(step3Idx == 6 && step1Idx == 3) return false;
+		if(step3Idx >= 7 && step1Idx == 1) {
+			step3Idx = 7;
+			return false;
+		}
+		else if(step3Idx >= 3 && step1Idx == 2) {
+			step3Idx = 3;
+			return false;
+		}
+		else if(step3Idx >= 6 && step1Idx == 3) {
+			step3Idx = 6;
+			return false;
+		}
 		else {
 			if(step1Idx == 0) {
 				$('#sunsoo-step2-div').css('display', 'block');
@@ -92,6 +102,50 @@ $(function () {
 	$('.sunsoo-web-event-btn2-scroll').click(function (event) {
 		$(document).scrollTop(2010);
 	});
+	$('.sunsoo-web-event-btn1-check').click(function (event) {
+		$('.ss-layer-popup').css('display', 'block');
+		if(step1Idx == 0) {
+			$("#ss-layer-popup-game-alert1").css('display', 'block');
+			return false;
+		}
+		if(step2Idx == 0) {
+			$("#ss-layer-popup-game-alert2").css('display', 'block');
+			return false;
+		}
+		if(step3Idx == 0) {
+			$("#ss-layer-popup-game-alert3").css('display', 'block');
+			return false;
+		}
+		else {
+			/* 재료 조합하는 중 */
+			var randNum = Math.floor(Math.random() * 4) + 1;
+			$("#ss-layer-popup-process" + randNum).css('display', 'block');
+			setTimeout(function() {
+				$("#ss-layer-popup-process" + randNum).css('display', 'none');
+				/* 레시피가 뜨는 팝업 */
+				$("#ss-layer-popup-recipe").removeClass().addClass("recipe" + step1Idx + step3Idx);
+				$("#ss-layer-popup-recipe").css('display', 'block');
+			}, 2000);
+		}
+		return true;
+	});
+	$('#ss-layer-popup-game-alert1').click(function (event) {
+		$('#ss-layer-popup-game-alert1').css('display', 'none');
+		$('.ss-layer-popup').css('display', 'none');
+	});
+	$('#ss-layer-popup-game-alert2').click(function (event) {
+		$('#ss-layer-popup-game-alert2').css('display', 'none');
+		$('.ss-layer-popup').css('display', 'none');
+	});
+	$('#ss-layer-popup-game-alert3').click(function (event) {
+		$('#ss-layer-popup-game-alert3').css('display', 'none');
+		$('.ss-layer-popup').css('display', 'none');
+	});	
+	$('.ss-recipe-close').click(function (event) {
+		$('#ss-layer-popup-recipe').css('display', 'none');
+		$('.ss-layer-popup').css('display', 'none');
+	});
+	
 });
 
 $(function () {

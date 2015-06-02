@@ -225,3 +225,64 @@ body {
 	left: 890px;
 	cursor: pointer;
 }
+.ss-layer-popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: none;
+}
+#ss-layer-popup-recipe {
+	position: absolute;
+	width: 581px;
+	height: 569px;
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	display: none;
+}
+.ss-layer-popup-common {
+	position: fixed;
+	margin: auto;
+	width: 100%;
+	height: 50%;
+	top: 25%;
+	text-align: center;
+	z-index: 1200;
+	display: none;
+}
+.ss-recipe-close {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: 15px;
+	right: 15px;
+	cursor: pointer;
+}
+.ss-recipe-confirm {
+	position: absolute;
+	width: 180px;
+	height: 52px;
+	bottom: 36px;
+	left: 201px;
+	cursor: pointer;
+}
+.recipe11 { background: url("../images/webRecipe11.png") no-repeat 0 0; }
+.recipe12 { background: url("../images/webRecipe12.png") no-repeat 0 0; }
+.recipe13 { background: url("../images/webRecipe13.png") no-repeat 0 0; }
+.recipe14 { background: url("../images/webRecipe14.png") no-repeat 0 0; }
+.recipe15 { background: url("../images/webRecipe15.png") no-repeat 0 0; }
+.recipe16 { background: url("../images/webRecipe16.png") no-repeat 0 0; }
+.recipe17 { background: url("../images/webRecipe17.png") no-repeat 0 0; }
+.recipe21 { background: url("../images/webRecipe21.png") no-repeat 0 0; }
+.recipe22 { background: url("../images/webRecipe22.png") no-repeat 0 0; }
+.recipe23 { background: url("../images/webRecipe23.png") no-repeat 0 0; }
+.recipe31 { background: url("../images/webRecipe31.png") no-repeat 0 0; }
+.recipe32 { background: url("../images/webRecipe32.png") no-repeat 0 0; }
+.recipe33 { background: url("../images/webRecipe33.png") no-repeat 0 0; }
+.recipe34 { background: url("../images/webRecipe34.png") no-repeat 0 0; }
+.recipe35 { background: url("../images/webRecipe35.png") no-repeat 0 0; }
+.recipe36 { background: url("../images/webRecipe36.png") no-repeat 0 0; }

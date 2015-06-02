@@ -11,6 +11,37 @@
 <title>Web Main</title>
 </head>
 <body>
+	<div class="ss-layer-popup">
+		<!-- 레시피 예외 처리용 alert window -->
+		<div id="ss-layer-popup-game-alert1" class="ss-layer-popup-common">
+			<p><img src="<c:url value="/resources/images/web_game_alert1.png" />"></p>
+		</div>
+		<div id="ss-layer-popup-game-alert2" class="ss-layer-popup-common">
+			<p><img src="<c:url value="/resources/images/web_game_alert2.png" />"></p>
+		</div>
+		<div id="ss-layer-popup-game-alert3" class="ss-layer-popup-common">
+			<p><img src="<c:url value="/resources/images/web_game_alert3.png" />"></p>
+		</div>
+		<!-- 레시피 조합 중입니다 -->
+		<div id="ss-layer-popup-process1" class="ss-layer-popup-common">
+			<p><img src="<c:url value="/resources/images/web_process1.gif" />"></p>
+		</div>
+		<div id="ss-layer-popup-process2" class="ss-layer-popup-common">
+			<p><img src="<c:url value="/resources/images/web_process2.gif" />"></p>
+		</div>
+		<div id="ss-layer-popup-process3" class="ss-layer-popup-common">
+			<p><img src="<c:url value="/resources/images/web_process3.gif" />"></p>
+		</div>
+		<div id="ss-layer-popup-process4" class="ss-layer-popup-common">
+			<p><img src="<c:url value="/resources/images/web_process4.gif" />"></p>
+		</div>
+		<!-- 레시피 확인하기 -->
+		<div id="ss-layer-popup-recipe">
+			<div class="ss-recipe-close"></div>
+			<div class="ss-recipe-confirm"></div>
+		</div>
+		
+	</div>
 	<form name="SMSFORM" method="post" action="http://www.okmunja.co.kr/Remote/RemoteMms.html">
 	
 		<input type="hidden" name="remote_id" value="bridgelab"><!-- OK 문자 아이디 -->
