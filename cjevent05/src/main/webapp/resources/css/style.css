@@ -114,6 +114,20 @@ body {
 	border: none;
 	z-index: 1000;
 }
+.sunsoo-web-event-phone {
+	position: absolute;
+	left: 280px;
+	top: 160px;
+	width: 220px;
+	height: 50px;
+	padding: 0;
+	background-color: transparent;
+	text-align: center;
+	color: #4d3524;
+	font-size: 1.0em;
+	border: none;
+	z-index: 1000;
+}
 .sunsoo-web-event-code::-webkit-input-placeholder {
 	color: #4d3524;
 	opacity: 0.60 !important;
@@ -233,6 +247,15 @@ body {
 	background-color: rgba(0, 0, 0, 0.7);
 	display: none;
 }
+.ss-layer-popup2 {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: none;
+	
+}
 #ss-layer-popup-recipe {
 	position: absolute;
 	width: 581px;
@@ -243,6 +266,14 @@ body {
 	bottom: 0;
 	right: 0;
 	display: none;
+}
+#ss-layer-popup2-confirm {
+	position: absolute;
+	width: 180px;
+	height: 52px;
+	bottom: 53px;
+	left: 190px;
+	cursor: pointer;
 }
 .ss-layer-popup-common {
 	position: fixed;
@@ -262,13 +293,32 @@ body {
 	right: 15px;
 	cursor: pointer;
 }
+.ss-recipe-close2 {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: 15px;
+	right: 15px;
+	cursor: pointer;
+}
 .ss-recipe-confirm {
 	position: absolute;
 	width: 180px;
 	height: 52px;
-	bottom: 36px;
-	left: 201px;
+	bottom: 53px;
+	left: 190px;
 	cursor: pointer;
+}
+#ss-layer-popup2-recipe{
+	position: absolute;
+	width: 581px;
+	height: 569px;
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	display: none;
 }
 .recipe11 { background: url("../images/webRecipe11.png") no-repeat 0 0; }
 .recipe12 { background: url("../images/webRecipe12.png") no-repeat 0 0; }

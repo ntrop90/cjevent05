@@ -38,11 +38,27 @@
 		<!-- 레시피 확인하기 -->
 		<div id="ss-layer-popup-recipe">
 			<div class="ss-recipe-close"></div>
-			<div class="ss-recipe-confirm"></div>
+			<div class="ss-recipe-confirm">
+				<p><img src="<c:url value="/resources/images/btn_check.png" />"></p>
+			</div>
 		</div>
-		
 	</div>
 	<form name="SMSFORM" method="post" action="http://www.okmunja.co.kr/Remote/RemoteMms.html">
+	
+	<div class="ss-layer-popup2">
+		<div id="ss-layer-popup2-recipe">
+			<div class="ss-layer-popup2-confirm">
+				<input type="text" maxlength="11" placeholder="'-'없이 숫자만 입력해주세요"  class="sunsoo-web-event-phone" id="remote_phone" name="remote_phone">
+				<p><img src="<c:url value="/resources/images/input_private.png" />"></p>
+				<div class="ss-recipe-close2"></div>
+				<div class="ss-recipe-confirm2">
+					<input type="submit" nmae="submit1" value="경품받기">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
 	
 		<input type="hidden" name="remote_id" value="bridgelab"><!-- OK 문자 아이디 -->
 		<input type="hidden" name="remote_pass" value="bridgelab01"><!-- OK 문자 패스워드 -->

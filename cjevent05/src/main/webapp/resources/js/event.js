@@ -129,6 +129,13 @@ $(function () {
 		}
 		return true;
 	});
+	
+	$('.ss-recipe-confirm').click(function (event) {
+		$('.ss-layer-popup2').css('display', 'block');
+		$("#ss-layer-popup2-recipe").css('display', 'block');
+		
+		return true;
+	});
 	$('#ss-layer-popup-game-alert1').click(function (event) {
 		$('#ss-layer-popup-game-alert1').css('display', 'none');
 		$('.ss-layer-popup').css('display', 'none');
@@ -142,6 +149,10 @@ $(function () {
 		$('.ss-layer-popup').css('display', 'none');
 	});	
 	$('.ss-recipe-close').click(function (event) {
+		$('#ss-layer-popup-recipe').css('display', 'none');
+		$('.ss-layer-popup').css('display', 'none');
+	});
+	$('.ss-recipe-close2').click(function (event) {
 		$('#ss-layer-popup-recipe').css('display', 'none');
 		$('.ss-layer-popup').css('display', 'none');
 	});
