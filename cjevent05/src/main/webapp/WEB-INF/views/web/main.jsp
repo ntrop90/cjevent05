@@ -56,7 +56,12 @@
 		 });
 		});
 		
-		</script>
+		
+	     function ViewLayer(){
+	        document.getElementById("Pop").style.display='inline';
+	     }
+		
+		
 		</script>
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/style.css" />">
 <title>Web Main</title>
@@ -114,23 +119,17 @@
 			
 				<!--<input type="text" name="remote_phone" id="remote_phone" maxlength="13" placeholder="'-'와 함께 숫자만 입력해 주세요" class="event_phone">-->
 				<a href="javascript:ViewLayer();" class="sunsoo-web-event-btn1-check" >
-					<img src="<c:url value="/resources/images/btnWebEvent1.png"/>"></a>
-					
+					<img src="<c:url value="/resources/images/btnWebEvent1.png"/>">
 					<div id="Pop">
-   						<img src="/cjevent/resources/images/dad_01_hotdog.png"/>
-   							<div class="popupclose">
-   								<img src="/cjevent/resources/images/btn_close.png" onclick="close();" />
-   							</div>
-   							<div class="popupcheck">
-   								<img src="/cjevent/resources/images/btn_check.png" onclick="ViewLayer2();">	
-							</div>
-				</div>
-				<div id="Pop2">
-   						<img src="/cjevent/resources/images/input_private.png" />	
-				</div>
-					
-				
-			</div>
+   						<img src="/cjevent/resources/images/dad_01_hotdog.png">		
+   						<div id="popupclose">
+   						
+   						</div>
+   						<div id="popupcheck">
+   						</div>
+					</div>
+					</a>
+		</div>
 			
 			</form>
 			
