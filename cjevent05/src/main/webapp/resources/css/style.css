@@ -73,8 +73,9 @@ body {
 }
 .event_phone {
 	position: absolute;
-	left: 275px;
-	top: 735px;
+	left: 500px;
+	right:40px;
+	top: 670px;
 	width: 350px;
 	height: 35px;
 	background-color: transparent;
@@ -84,6 +85,7 @@ body {
 	border: none;
 	z-index: 1000;
 }
+
 .event_phone::-webkit-input-placeholder {
 	color: #24a4a3;
 	opacity: 1 !important;
@@ -116,15 +118,39 @@ body {
 }
 .sunsoo-web-event-phone {
 	position: absolute;
-	left: 280px;
-	top: 160px;
+	left: 350px;
+	top: 168px;
 	width: 220px;
 	height: 50px;
 	padding: 0;
 	background-color: transparent;
 	text-align: center;
 	color: #4d3524;
-	font-size: 1.0em;
+	font-size: 0.8em;
+	border: none;
+	z-index: 1000;
+}
+.non-agree{
+	position: absolute;
+	left: 401px;
+	top: 263px;
+}
+.agree{
+	position: absolute;
+	left: 464px;
+	top: 263px;
+}
+.sunsoo-web-event-name{
+	position: absolute;
+	left: 60px;
+	top: 168px;
+	width: 220px;
+	height: 50px;
+	padding: 0;
+	background-color: transparent;
+	text-align: center;
+	color: #4d3524;
+	font-size: 0.8em;
 	border: none;
 	z-index: 1000;
 }
@@ -319,6 +345,15 @@ body {
 	bottom: 0;
 	right: 0;
 	display: none;
+}
+.ss-recipe-confirm2{
+	position: absolute;
+	width: 180px;
+	height: 52px;
+	bottom: -10px;
+	left: 230px;
+	cursor: pointer;
+	
 }
 .recipe11 { background: url("../images/webRecipe11.png") no-repeat 0 0; }
 .recipe12 { background: url("../images/webRecipe12.png") no-repeat 0 0; }
