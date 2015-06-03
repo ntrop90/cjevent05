@@ -3,7 +3,8 @@
  */
 $(function () {
 	var step1Idx = 0; var step2Idx = 0; var step3Idx = 0;
-	$('#btn-step1-left').click(function (event) {
+	var collectAgreeFlag = 0; var bridgeAgreeFlag = 0;
+ 	$('#btn-step1-left').click(function (event) {
 		if(step1Idx == 0) return false;
 		else {
 			/* step3 는 무조건 닫아야 함 */
@@ -131,9 +132,12 @@ $(function () {
 	});
 	
 	$('.ss-recipe-confirm').click(function (event) {
+		/*
 		$('.ss-layer-popup2').css('display', 'block');
 		$("#ss-layer-popup2-recipe").css('display', 'block');
-		
+		*/
+		$('#ss-layer-popup-info').css('display', 'block');
+		$('#ss-layer-popup-recipe').css('display', 'none');
 		return true;
 	});
 	$('#ss-layer-popup-game-alert1').click(function (event) {
@@ -148,6 +152,18 @@ $(function () {
 		$('#ss-layer-popup-game-alert3').css('display', 'none');
 		$('.ss-layer-popup').css('display', 'none');
 	});	
+	$('#ss-layer-popup-info-alert1').click(function (event) {
+		$('#ss-layer-popup-info-alert1').css('display', 'none');
+	});
+	$('#ss-layer-popup-info-alert2').click(function (event) {
+		$('#ss-layer-popup-info-alert2').css('display', 'none');
+	});
+	$('#ss-layer-popup-info-alert3').click(function (event) {
+		$('#ss-layer-popup-info-alert3').css('display', 'none');
+	});	
+	$('#ss-layer-popup-info-alert4').click(function (event) {
+		$('#ss-layer-popup-info-alert4').css('display', 'none');
+	});	
 	$('.ss-recipe-close').click(function (event) {
 		$('#ss-layer-popup-recipe').css('display', 'none');
 		$('.ss-layer-popup').css('display', 'none');
@@ -156,7 +172,40 @@ $(function () {
 		$('#ss-layer-popup-recipe').css('display', 'none');
 		$('.ss-layer-popup').css('display', 'none');
 	});
-	
+	$('.collect-agree').click(function (event) {
+		collectAgreeFlag = 1;
+		$('.collect-disagree-img').css('display', 'none');
+		$('.collect-agree-img').css('display', 'block');
+	});
+	$('.collect-disagree').click(function (event) {
+		collectAgreeFlag = 0;
+		$('.collect-agree-img').css('display', 'none');
+		$('.collect-disagree-img').css('display', 'block');
+	});
+	$('.bridge-agree').click(function (event) {
+		bridgeAgreeFlag = 1;
+		$('.bridge-disagree-img').css('display', 'none');
+		$('.bridge-agree-img').css('display', 'block');
+	});
+	$('.bridge-disagree').click(function (event) {
+		bridgeAgreeFlag = 0;
+		$('.bridge-agree-img').css('display', 'none');
+		$('.bridge-disagree-img').css('display', 'block');
+	});
+	$('.ss-info-confirm').click(function (event) {
+		if(collectAgreeFlag == 0) {
+			$("#ss-layer-popup-info-alert1").css('display', 'block');
+			return false;
+		}
+		if(bridgeAgreeFlag == 0) {
+			$("#ss-layer-popup-info-alert2").css('display', 'block');
+			return false;
+		}
+		if($("#remote_phone").val() == "") {
+			$("#ss-layer-popup-info-alert3").css('display', 'block');
+			return false;
+		}
+	});
 });
 
 $(function () {

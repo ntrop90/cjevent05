@@ -119,7 +119,7 @@ body {
 .sunsoo-web-event-phone {
 	position: absolute;
 	left: 350px;
-	top: 168px;
+	top: 152px;
 	width: 220px;
 	height: 50px;
 	padding: 0;
@@ -143,7 +143,7 @@ body {
 .sunsoo-web-event-name{
 	position: absolute;
 	left: 60px;
-	top: 168px;
+	top: 152px;
 	width: 220px;
 	height: 50px;
 	padding: 0;
@@ -331,8 +331,8 @@ body {
 	position: absolute;
 	width: 180px;
 	height: 52px;
-	bottom: 53px;
-	left: 190px;
+	bottom: 36px;
+	left: 201px;
 	cursor: pointer;
 }
 #ss-layer-popup2-recipe{
@@ -371,3 +371,76 @@ body {
 .recipe34 { background: url("../images/webRecipe34.png") no-repeat 0 0; }
 .recipe35 { background: url("../images/webRecipe35.png") no-repeat 0 0; }
 .recipe36 { background: url("../images/webRecipe36.png") no-repeat 0 0; }
+.ss-share-fb {
+	
+}
+.ss-share-tw {
+	
+}
+.ss-share-ks {
+	
+}
+#ss-layer-popup-info {
+	background: url("../images/bgWebEvent1Popup.png") no-repeat;
+	position: absolute;
+	width: 607px;
+	height: 579px;
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	display: none;
+}
+.collect-agree {
+	position: absolute;
+	width: 19px;
+	height: 19px;
+	left: 402px;
+	top: 247px;
+	cursor: pointer;
+}
+.collect-disagree {
+	position: absolute;
+	width: 19px;
+	height: 19px;
+	left: 464px;
+	top: 247px;
+	cursor: pointer;
+}
+.bridge-agree {
+	position: absolute;
+	width: 19px;
+	height: 19px;
+	left: 402px;
+	top: 378px;
+	cursor: pointer;
+}
+.bridge-disagree {
+	position: absolute;
+	width: 19px;
+	height: 19px;
+	left: 464px;
+	top: 378px;
+	cursor: pointer;
+}
+.collect-agree-img {
+	display: none;
+}
+.collect-disagree-img {
+	display: none;
+}
+.bridge-agree-img {
+	display: none;
+}
+.bridge-disagree-img {
+	display: none;
+}
+.ss-info-confirm {
+	position: absolute;
+	width: 141px;
+	height: 47px;
+	left: 233px;
+	bottom: 22px;
+	cursor: pointer;
+}

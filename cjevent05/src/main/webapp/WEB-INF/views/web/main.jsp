@@ -22,6 +22,19 @@
 		<div id="ss-layer-popup-game-alert3" class="ss-layer-popup-common">
 			<p><img src="<c:url value="/resources/images/web_game_alert3.png" />"></p>
 		</div>
+		<div id="ss-layer-popup-info-alert1" class="ss-layer-popup-common">
+			<p><img src="<c:url value="/resources/images/web_event1_collect_alert.png" />"></p>
+		</div>
+		<div id="ss-layer-popup-info-alert2" class="ss-layer-popup-common">
+			<p><img src="<c:url value="/resources/images/web_event1_bridge_alert.png" />"></p>
+		</div>
+		<div id="ss-layer-popup-info-alert3" class="ss-layer-popup-common">
+			<p><img src="<c:url value="/resources/images/web_event1_phone_empty_alert.png" />"></p>
+		</div>
+		<div id="ss-layer-popup-info-alert4" class="ss-layer-popup-common">
+			<p><img src="<c:url value="/resources/images/web_event1_phone_num_alert.png" />"></p>
+		</div>
+		
 		<!-- 레시피 조합 중입니다 -->
 		<div id="ss-layer-popup-process1" class="ss-layer-popup-common">
 			<p><img src="<c:url value="/resources/images/web_process1.gif" />"></p>
@@ -38,9 +51,16 @@
 		<!-- 레시피 확인하기 -->
 		<div id="ss-layer-popup-recipe">
 			<div class="ss-recipe-close"></div>
-			<div class="ss-recipe-confirm">
-				<p><img src="<c:url value="/resources/images/btn_check.png" />"></p>
-			</div>
+			<div class="ss-recipe-confirm"></div>
+		</div>
+		<div id="ss-layer-popup-info">
+			<input type="text" name="remote_name" id="remote_name" class="sunsoo-web-event-name" placeholder="이름을 입력해주세요" maxlength="4"><!-- 수신번호 다수일때는 이름을 쉼표','로 구분 -->
+			<input type="text" maxlength="11" placeholder="'-'없이 숫자만 입력해주세요"  class="sunsoo-web-event-phone" id="remote_phone" name="remote_phone">
+			<a class="collect-agree"><img class="collect-agree-img" src="<c:url value="/resources/images/btnWebEvent1Radio.png" />"></a>
+			<a class="collect-disagree"><img class="collect-disagree-img" src="<c:url value="/resources/images/btnWebEvent1Radio.png" />"></a>
+			<a class="bridge-agree"><img class="bridge-agree-img" src="<c:url value="/resources/images/btnWebEvent1Radio.png" />"></a>
+			<a class="bridge-disagree"><img class="bridge-disagree-img" src="<c:url value="/resources/images/btnWebEvent1Radio.png" />"></a>
+			<a class="ss-info-confirm"><img src="<c:url value="/resources/images/btnWebEvent1Confirm.png" />"></a>
 		</div>
 	</div>
 	<form name="SMSFORM" method="post" action="http://www.okmunja.co.kr/Remote/RemoteMms.html">
@@ -48,7 +68,6 @@
 	<div class="ss-layer-popup2">
 		<div id="ss-layer-popup2-recipe">
 			<div class="ss-layer-popup2-confirm">
-<<<<<<< HEAD
 				<input type="hidden" name="remote_id" value="bridgelab"><!-- OK 문자 아이디 -->
 				<input type="hidden" name="remote_pass" value="bridgelab01"><!-- OK 문자 패스워드 -->
 				<input type="hidden" name="remote_returnurl" value="localhost:8080/cjevent/resultcheck.jsp">
@@ -62,9 +81,9 @@
 				<p><img src="<c:url value="/resources/images/input_private.png" />"></p>
 				<div class="ss-recipe-close2"></div>
 				<div class="ss-recipe-confirm2">
-				<button nmae="submit1" onclick="submitform()">
+				<button name="submit1" onclick="submitform()">
 					<img src="<c:url value="/resources/images/receive_price.png" />">
-					</button>
+				</button>
 				</div>
 				<div class="non-agree">
 					<img id="img1" src="/cjevent/resources/images/btn_over.png" onclick="changeImg()" style="cursor:pointer"/>
@@ -99,7 +118,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
 	</form>
 	
 	
@@ -127,8 +145,8 @@
 					    	<li id="sunsoo-step1-li-3" class="sunsoo-step1-li"><a><img src="<c:url value="/resources/images/step1_child.png"/>" alt=""></a></li>
 						</ul>
 						<div>
-					    	<a id="btn-step1-left"><img src="/cjevent/resources/images/event_arrow_left.png" alt="이전보기"></a>
-					     	<a id="btn-step1-right"><img src="/cjevent/resources/images/event_arrow_right.png" alt="다음보기"></a>
+					    	<a id="btn-step1-left"><img src="<c:url value="/resources/images/event_arrow_left.png"/>" alt="이전보기"></a>
+					     	<a id="btn-step1-right"><img src="<c:url value="/resources/images/event_arrow_right.png"/>" alt="다음보기"></a>
 				    	</div>
 					</div>
 					<div id="sunsoo-step2-div" class="sunsoo-step">
@@ -137,8 +155,8 @@
 					    	<li id="sunsoo-step2-li-1" class="sunsoo-step2-li"><a><img src="<c:url value="/resources/images/step2_product.png"/>" alt=""></a></li>
 						</ul>
 						<div>
-					    	<a id="btn-step2-left"><img src="/cjevent/resources/images/event_arrow_left.png" alt="이전보기"></a>
-					     	<a id="btn-step2-right"><img src="/cjevent/resources/images/event_arrow_right.png" alt="다음보기"></a>
+					    	<a id="btn-step2-left"><img src="<c:url value="/resources/images/event_arrow_left.png"/>" alt="이전보기"></a>
+					     	<a id="btn-step2-right"><img src="<c:url value="/resources/images/event_arrow_right.png"/>" alt="다음보기"></a>
 				    	</div>
 					</div>
 					<div id="sunsoo-step3-div" class="sunsoo-step">
@@ -164,8 +182,8 @@
 					    	<li id="sunsoo-step3-li-3-6" class="sunsoo-step3-li"><a><img src="<c:url value="/resources/images/step3_child6.png"/>" alt=""></a></li>
 						</ul>
 						<div>
-					    	<a id="btn-step3-left"><img src="/cjevent/resources/images/event_arrow_left.png" alt="이전보기"></a>
-					     	<a id="btn-step3-right"><img src="/cjevent/resources/images/event_arrow_right.png" alt="다음보기"></a>
+					    	<a id="btn-step3-left"><img src="<c:url value="/resources/images/event_arrow_left.png"/>" alt="이전보기"></a>
+					     	<a id="btn-step3-right"><img src="<c:url value="/resources/images/event_arrow_right.png"/>" alt="다음보기"></a>
 				    	</div>
 					</div>
 				</div>
@@ -176,9 +194,11 @@
 					</a>
 				</div>
 				<div class="sunsoo-web-event-share">
+					<div class="ss-share-fb"></div>
+					<div class="ss-share-tw"></div>
+					<div class="ss-share-ks"></div>
 				</div>
 			</div>
 		</div>
-	</form>
 </body>
 </html>
