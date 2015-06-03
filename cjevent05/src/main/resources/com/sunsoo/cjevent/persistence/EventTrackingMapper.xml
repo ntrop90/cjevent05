@@ -17,4 +17,12 @@
 	WHERE
 		REG_DATE = CONVERT(DATE, GETDATE())
     </update>
+    
+    <update id="updateMmsCount">
+    UPDATE SS_EVENT_TRACKING
+    SET
+    	MMS_CNT = MMS_CNT + 1
+	WHERE
+		REG_DATE = CONVERT(DATE, GETDATE())    	
+    </update>
 </mapper>

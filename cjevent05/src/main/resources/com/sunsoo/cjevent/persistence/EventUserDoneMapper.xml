@@ -35,4 +35,20 @@
     	REMOTE_PHONE = #{remote_phone}
     </select>
 
+	<update id="updateDoneMmsFlag" parameterType="EventUserDone">
+	UPDATE SS_EVENT_USER_DONE
+	SET
+		DONE_MMS = 1
+	WHERE
+		REMOTE_PHONE = #{remote_phone}
+	</update>
+	
+	<select id="getDoneMmsFlag" parameterType="EventUserDone" resultType="boolean">
+	SELECT
+		DONE_MMS
+	FROM
+		SS_EVENT_USER_DONE
+	WHERE
+		REMOTE_PHONE = #{remote_phone}
+	</select>
 </mapper>

@@ -48,14 +48,6 @@
 	<div class="ss-layer-popup2">
 		<div id="ss-layer-popup2-recipe">
 			<div class="ss-layer-popup2-confirm">
-				<input type="hidden" name="remote_id" value="bridgelab"><!-- OK 문자 아이디 -->
-				<input type="hidden" name="remote_pass" value="bridgelab01"><!-- OK 문자 패스워드 -->
-				<input type="hidden" name="remote_returnurl" value="localhost:8080/cjevent/resultcheck.jsp">
-				<!-- <input type="hidden" name="remote_phone" value="010-5390-2409">--><!-- 수신번호 다수일때는 쉼표','로 구분 -->
-				<!-- <input type="hidden" name="remote_name" value="우제영"> --><!-- 수신번호 다수일때는 이름을 쉼표','로 구분 -->
-				<input type="hidden" name="remote_callback" value="01071727257"><!-- 발신번호 숫자만 입력 -->
-				<input type="hidden" name="remote_msg" value="성공했습니다.성공했습니다.성공했습니다.성공했습니다.성공했습니다.성공했습니다.성공했습니다.">
-				<input type="hidden" name="remote_contents" value="/resources/.png"><!-- 미리 업로드 된 jpg 이미지 파일명 -->
 				<input type="text" maxlength="11" placeholder="'-'없이 숫자만 입력해주세요"  class="sunsoo-web-event-phone" id="remote_phone" name="remote_phone">
 				<p><img src="<c:url value="/resources/images/input_private.png" />"></p>
 				<div class="ss-recipe-close2"></div>
@@ -72,7 +64,7 @@
 						});
 					}
 					</script>
-					<input type="button" nmae="submit1" value="경품받기" onclick="submitform()">
+					<input type="button" name="submit1" value="경품받기" onclick="submitform()">
 				</div>
 			</div>
 		</div>
@@ -156,6 +148,6 @@
 				</div>
 			</div>
 		</div>
-	
+	</form>
 </body>
 </html>

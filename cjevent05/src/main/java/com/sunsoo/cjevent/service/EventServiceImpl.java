@@ -129,4 +129,24 @@ public class EventServiceImpl implements EventService {
 		eventCashManage.setCash_type(cash_type);
 		eventCashManageMapper.insertCashManage(eventCashManage);
 	}
+	
+	@Transactional
+	public void updateMmsCount() {
+		eventTrackingMapper.updateMmsCount();
+	}
+	
+	@Transactional
+	public void updateMmsCountAndFlaging(String remote_phone) {
+		EventUserDone eventUserDone = new EventUserDone();
+		eventUserDone.setRemote_phone(remote_phone);
+		eventUserDoneMapper.updateDoneMmsFlag(eventUserDone);
+		eventTrackingMapper.updateMmsCount();
+	}
+	
+	@Transactional
+	public boolean getDoneMmsFlag(String remote_phone) {
+		EventUserDone eventUserDone = new EventUserDone();
+		eventUserDone.setRemote_phone(remote_phone);
+		return eventUserDoneMapper.getDoneMmsFlag(eventUserDone);
+	}
 }

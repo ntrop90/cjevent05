@@ -32,7 +32,7 @@ public class MainController {
 		return "web/main";
 	}
 	
-	// 웹에서의 문자 전송 로직
+	// 웹에서의 문자 전송 로직(이벤트1 참여)
 	@RequestMapping(value = "/web/result", method = RequestMethod.POST)
 	public String webResult(@ModelAttribute EventModel eventModel) {
 		// 사용자의 휴대폰 번호를 SHA-256으로 암호화
@@ -77,7 +77,10 @@ public class MainController {
 			// 더 이상 할당된 쿠폰이 없다면 100% 무조건 당첨 쿠폰만 갖게된다. 일단 3으로 표기.
 			// 더 이상 MMS를 받지 않아도 되는지 done_mms를 검사 후 보내야 한다면
 			// if문 들어가야함
-			eventModel.setRemote_msg("3");
+			if(!eventService.getDoneMmsFlag(remote_phone)) {
+				eventModel.setRemote_msg("3");
+				eventService.updateMmsCountAndFlaging(remote_phone);
+			}
 			// 만약 이미 문자가 전송되었다면 remote_flag를 false로 두어 문자가 발송되지 않도록
 			// 최초로 보낸 1회의 문자라면 문자 보낸 것에 대한 트래킹을 한다.
 		}
@@ -88,30 +91,39 @@ public class MainController {
 			if(vips_done < vips_cnt || eventService.checkUserCash(remote_phone)) {
 				if(userRandomNum == 0) {
 					eventService.assignUserCash(remote_phone, 0);
+					// VIPS 당첨 문자를 보내기 위해 값을 세팅한다.
 					eventModel.setRemote_msg("0");
-					// 트래킹 꼭 해야함 
+					// 문자가 간 것에 대한 트래킹을 한다.
+					eventService.updateMmsCount();
 				}
 			}
 			if(cgv_done < cgv_cnt || eventService.checkUserCash(remote_phone)) {
 				if(userRandomNum >= 1 && userRandomNum <= 3) {
 					eventService.assignUserCash(remote_phone, 1);
+					// CGV 당첨 문자를 보내기 위해 값을 세팅한다.
 					eventModel.setRemote_msg("1");
-					// 트래킹 꼭 해야함 
+					// 문자가 간 것에 대한 트래킹을 한다.
+					eventService.updateMmsCount();
 				}
 			}
 			if(gift_done < gift_cnt || eventService.checkUserCash(remote_phone)) {
 				if(userRandomNum >= 4 && userRandomNum <= 8) {
 					eventService.assignUserCash(remote_phone, 2);
+					// 기프티콘 당첨 문자를 보내기 위해 값을 세팅한다.
 					eventModel.setRemote_msg("2");
-					// 트래킹 꼭 해야함 
+					// 문자가 간 것에 대한 트래킹을 한다.
+					eventService.updateMmsCount();
 				}
 			}
 			// 결국 당첨되지 않았을 경우
 			if(eventService.checkUserCash(remote_phone)) {
 				// if문 들어가야함(done_mms 검사 필요)
-				eventModel.setRemote_msg("3");
 				// 만약 이미 문자가 전송되었다면 remote_flag를 false로 두어 문자가 발송되지 않도록
 				// 최초로 보낸 1회의 문자라면 문자 보낸 것에 대한 트래킹을 한다.
+				if(!eventService.getDoneMmsFlag(remote_phone)) {
+					eventModel.setRemote_msg("3");
+					eventService.updateMmsCountAndFlaging(remote_phone);
+				}
 			}
 		}
 		return "web/result";
@@ -239,9 +251,10 @@ public class MainController {
 				|| eventService.checkUserCash(remote_phone)) {
 			// 더 이상 할당된 쿠폰이 없다면 100% 무조건 당첨 쿠폰만 갖게된다. 일단 3으로 표기.
 			// 더 이상 MMS를 받지 않아도 되는지 done_mms를 검사 후 보내야 한다면
-			// if문 들어가야함
-			eventModel.setRemote_msg("3");
-			// 만약 이미 문자가 전송되었다면 remote_flag를 false로 두어 문자가 발송되지 않도록
+			if(!eventService.getDoneMmsFlag(remote_phone)) {
+				eventModel.setRemote_msg("3");
+				eventService.updateMmsCountAndFlaging(remote_phone);
+			}
 			// 최초로 보낸 1회의 문자라면 문자 보낸 것에 대한 트래킹을 한다.
 		}
 		else {
@@ -252,29 +265,32 @@ public class MainController {
 				if(userRandomNum == 0) {
 					eventService.assignUserCash(remote_phone, 0);
 					eventModel.setRemote_msg("0");
-					// 트래킹 꼭 해야함 
+					// 문자가 간 것에 대한 트래킹을 한다.
+					eventService.updateMmsCount();
 				}
 			}
 			if(cgv_done < cgv_cnt || eventService.checkUserCash(remote_phone)) {
 				if(userRandomNum >= 1 && userRandomNum <= 3) {
 					eventService.assignUserCash(remote_phone, 1);
 					eventModel.setRemote_msg("1");
-					// 트래킹 꼭 해야함 
+					// 문자가 간 것에 대한 트래킹을 한다.
+					eventService.updateMmsCount();
 				}
 			}
 			if(gift_done < gift_cnt || eventService.checkUserCash(remote_phone)) {
 				if(userRandomNum >= 4 && userRandomNum <= 8) {
 					eventService.assignUserCash(remote_phone, 2);
 					eventModel.setRemote_msg("2");
-					// 트래킹 꼭 해야함 
+					// 문자가 간 것에 대한 트래킹을 한다.
+					eventService.updateMmsCount();
 				}
 			}
 			// 결국 당첨되지 않았을 경우
 			if(eventService.checkUserCash(remote_phone)) {
-				// if문 들어가야함(done_mms 검사 필요)
-				eventModel.setRemote_msg("3");
-				// 만약 이미 문자가 전송되었다면 remote_flag를 false로 두어 문자가 발송되지 않도록
-				// 최초로 보낸 1회의 문자라면 문자 보낸 것에 대한 트래킹을 한다.
+				if(!eventService.getDoneMmsFlag(remote_phone)) {
+					eventModel.setRemote_msg("3");
+					eventService.updateMmsCountAndFlaging(remote_phone);
+				}
 			}
 		}
 		
