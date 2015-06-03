@@ -52,13 +52,15 @@
 				<p><img src="<c:url value="/resources/images/input_private.png" />"></p>
 				<div class="ss-recipe-close2"></div>
 				<div class="ss-recipe-confirm2">
+					
+				</div>
 				<script type="text/javascript">
 					function submitform()
 					{
 						$.ajax({
 							url: "http://www.okmunja.co.kr/Remote/RemoteMms.html",
 							type: "POST",
-							data: "remote_id=bridgelab&remote_pass=bridgelab01&remote_phone=01053902409&remote_msg=discountcoupon&remote_callback=01071727257",
+							data: "remote_id=bridgelab&remote_pass=bridgelab01&remote_phone=remote_phone&remote_msg=discountcoupon&remote_callback=01071727257",
 							success:function(e) {
 							}
 						});
