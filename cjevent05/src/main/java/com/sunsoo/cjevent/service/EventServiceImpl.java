@@ -149,4 +149,50 @@ public class EventServiceImpl implements EventService {
 		eventUserDone.setRemote_phone(remote_phone);
 		return eventUserDoneMapper.getDoneMmsFlag(eventUserDone);
 	}
+	
+	@Transactional
+	public void updateFbWebCntTracking() {
+		eventTrackingMapper.updateFbWebCount();
+	}
+
+	@Transactional
+	public void updateFbMobileCntTracking() {
+		eventTrackingMapper.updateFbMobileCount();
+	}
+
+	@Transactional
+	public void updateTwWebCntTracking() {
+		eventTrackingMapper.updateTwWebCount();
+	}
+
+	@Transactional
+	public void updateTwMobileCntTracking() {
+		eventTrackingMapper.updateTwMobileCount();
+	}
+
+	@Transactional
+	public void updateKsWebCntTracking() {
+		eventTrackingMapper.updateKsWebCount();		
+	}
+
+	@Transactional
+	public void updateKsMobileCntTracking() {
+		eventTrackingMapper.updateKsMobileCount();		
+	}
+	
+	@Transactional
+	public void updateBuyWebCntTracking() {
+		eventTrackingMapper.updateBuyWebCount();
+	}
+
+	@Transactional
+	public void updateBuyMobileCntTracking() {
+		eventTrackingMapper.updateBuyMobileCount();		
+	}
+	
+	@Transactional
+	public void updateKtCntTracking(String remote_phone) {
+		eventTrackingMapper.updateKtCount();				
+	}
+
 }

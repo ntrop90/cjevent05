@@ -25,4 +25,77 @@
 	WHERE
 		REG_DATE = CONVERT(DATE, GETDATE())    	
     </update>
+    
+    <update id="updateFbWebCount">
+    UPDATE SS_EVENT_TRACKING
+    SET
+    	FB_WEB_CNT = FB_WEB_CNT + 1
+	WHERE
+		REG_DATE = CONVERT(DATE, GETDATE())    
+    </update>
+
+    <update id="updateFbMobileCount">
+    UPDATE SS_EVENT_TRACKING
+    SET
+    	FB_M_CNT = FB_M_CNT + 1
+	WHERE
+		REG_DATE = CONVERT(DATE, GETDATE())    
+    </update>
+
+    <update id="updateTwWebCount">
+    UPDATE SS_EVENT_TRACKING
+    SET
+    	TW_WEB_CNT = TW_WEB_CNT + 1
+	WHERE
+		REG_DATE = CONVERT(DATE, GETDATE())    
+    </update>
+
+    <update id="updateTwMobileCount">
+    UPDATE SS_EVENT_TRACKING
+    SET
+    	TW_M_CNT = TW_M_CNT + 1
+	WHERE
+		REG_DATE = CONVERT(DATE, GETDATE())    
+    </update>
+
+    <update id="updateKsWebCount">
+    UPDATE SS_EVENT_TRACKING
+    SET
+    	KS_WEB_CNT = KS_WEB_CNT + 1
+	WHERE
+		REG_DATE = CONVERT(DATE, GETDATE())    
+    </update>
+
+    <update id="updateKsMobileCount">
+    UPDATE SS_EVENT_TRACKING
+    SET
+    	KS_M_CNT = KS_M_CNT + 1
+	WHERE
+		REG_DATE = CONVERT(DATE, GETDATE())    
+    </update>
+
+    <update id="updateBuyWebCount">
+    UPDATE SS_EVENT_TRACKING
+    SET
+    	BUY_WEB_CNT = BUY_WEB_CNT + 1
+	WHERE
+		REG_DATE = CONVERT(DATE, GETDATE())    
+    </update>
+
+    <update id="updateBuyMobileCount">
+    UPDATE SS_EVENT_TRACKING
+    SET
+    	BUY_M_CNT = BUY_M_CNT + 1
+	WHERE
+		REG_DATE = CONVERT(DATE, GETDATE())    
+    </update>
+
+	<update id="updateKtCount">
+    UPDATE SS_EVENT_TRACKING
+    SET
+    	KT_CNT = KT_CNT + 1
+	WHERE
+		REG_DATE = CONVERT(DATE, GETDATE())    
+    </update>
+
 </mapper>

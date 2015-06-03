@@ -1,7 +1,5 @@
 package com.sunsoo.cjevent.service;
 
-import com.sunsoo.cjevent.domain.EventUserDone;
-
 public interface EventService {
 	public boolean checkExistingUser(String remote_phone);
 	public void entryWebEvent1Again(String remote_phone);
@@ -14,4 +12,13 @@ public interface EventService {
 	public void updateMmsCount();
 	public void updateMmsCountAndFlaging(String remote_phone);
 	public boolean getDoneMmsFlag(String remote_phone);
+	public void updateFbWebCntTracking();
+	public void updateFbMobileCntTracking();
+	public void updateTwWebCntTracking();
+	public void updateTwMobileCntTracking();
+	public void updateKsWebCntTracking();
+	public void updateKsMobileCntTracking();
+	public void updateBuyWebCntTracking();
+	public void updateBuyMobileCntTracking();
+	public void updateKtCntTracking(String remote_phone);
 }

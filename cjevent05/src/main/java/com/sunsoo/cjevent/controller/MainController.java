@@ -132,54 +132,67 @@ public class MainController {
 	@RequestMapping(value = "/web/shareWebFb", method = RequestMethod.POST)
 	public String shareWebFb(@ModelAttribute EventTracking eventTracking) {
 		// 트래킹이 들어가는 부분(2개 table의 fb_web_cnt가 올라감)
-		return "redirect:(facebook share url)";
+		eventService.updateFbWebCntTracking();
+		return "redirect:http://www.facebook.com/sharer/sharer.php?u=CJ제일제당이벤트페이지URL";
 	}
 
 	@RequestMapping(value = "/web/shareMobileFb", method = RequestMethod.POST)
 	public String shareMobileFb(@ModelAttribute EventTracking eventTracking) {
 		// 트래킹이 들어가는 부분(2개 table의 fb_m_cnt가 올라감)
-		return "redirect:(facebook share url)";
+		eventService.updateFbMobileCntTracking();
+		// redirect url을 ajax로 바꾸는 것을 고려중
+		return "redirect:http://www.facebook.com/sharer/sharer.php?u=CJ제일제당이벤트페이지URL";
 	}
 
 	@RequestMapping(value = "/web/shareWebTw", method = RequestMethod.POST)
 	public String shareWebTw(@ModelAttribute EventTracking eventTracking) {
+		eventService.updateTwWebCntTracking();
 		// 트래킹이 들어가는 부분(2개 table의 tw_web_cnt가 올라감)
-		return "redirect:(twitter share url)";
+		return "redirect:https://twitter.com/intent/tweet?text=TEXT&url=CJ제일제당이벤트페이지URL";
 	}
 
 	@RequestMapping(value = "/web/shareMobileTw", method = RequestMethod.POST)
 	public String shareMobileTw(@ModelAttribute EventTracking eventTracking) {
 		// 트래킹이 들어가는 부분(2개 table의 tw_m_cnt가 올라감)
-		return "redirect:(twitter share url)";
+		eventService.updateTwMobileCntTracking();
+		// redirect url을 ajax로 바꾸는 것을 고려중
+		return "redirect:https://twitter.com/intent/tweet?text=TEXT&url=CJ제일제당이벤트페이지URL";
 	}
 
 	@RequestMapping(value = "/web/shareWebKs", method = RequestMethod.POST)
 	public String shareWebKs(@ModelAttribute EventTracking eventTracking) {
+		eventService.updateKsWebCntTracking();
 		// 트래킹이 들어가는 부분(2개 table의 ks_web_cnt가 올라감)
-		return "redirect:(KakaoStory share url)";
+		return "redirect:https://story.kakao.com/";
 	}
 
 	@RequestMapping(value = "/web/shareMobileKs", method = RequestMethod.POST)
 	public String shareMobileKs(@ModelAttribute EventTracking eventTracking) {
+		eventService.updateKsMobileCntTracking();
 		// 트래킹이 들어가는 부분(2개 table의 ks_m_cnt가 올라감)
-		return "redirect:(KakaoStory share url)";
+		// redirect url을 ajax로 바꾸는 것을 고려중
+		return "redirect:https://story.kakao.com/";
 	}
 
 	@RequestMapping(value = "/web/goWebBuy", method = RequestMethod.POST)
 	public String goWebBuy(@ModelAttribute EventTracking eventTracking) {
+		eventService.updateBuyWebCntTracking();
 		// 트래킹이 들어가는 부분(2개 table의 buy_web_cnt가 올라감)
-		return "redirect:(요거트 파우더 구매 url)";
+		return "redirect:https://(요거트 파우더 구매 url)";
 	}
 
 	@RequestMapping(value = "/web/goMobileBuy", method = RequestMethod.POST)
 	public String goMobileBuy(@ModelAttribute EventTracking eventTracking) {
+		eventService.updateBuyMobileCntTracking();
 		// 트래킹이 들어가는 부분(2개 table의 buy_m_cnt가 올라감)
-		return "redirect:(요거트 파우더 구매 모바일 url)";
+		return "redirect:https://(요거트 파우더 구매 모바일 url)";
 	}
 
 	@RequestMapping(value = "/web/shareKt", method = RequestMethod.POST)
 	public String shareKt(@ModelAttribute EventTracking eventTracking) {
 		// 트래킹이 들어가는 부분(2개 table의 kt_cnt가 올라감)
+		// 카카오톡 공유는 mobile js/jquery processing이 끝나면 한번에 탑재 예정(ajax)
+		// eventService.updateKtCntTracking();
 		return "redirect:(카카오톡 프로토콜에 따른 url)";
 	}
 
