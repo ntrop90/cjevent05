@@ -1,0 +1,173 @@
+
+@CHARSET "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+body {
+	margin: 0 auto;
+	font-family: "Nanum Gothic";
+	font-weight: 400;
+}
+*:focus {
+	outline: 0;
+}
+.sunsoo-mobile-wrapper {
+	position: relative;
+	min-width: 980px;
+	min-height: 100%;
+	margin: 0 auto;
+}
+.sunsoo-mobile-contents {
+	position: relative;
+	width: 980px;
+	margin: 0 auto;
+}
+.sunsoo-mobile-event-intro {
+	position: relative;
+	height: 740px;
+	line-height: 0px;
+	background: url("../images/bg_mobile_intro.png") no-repeat 0 0;
+}
+.sunsoo-mobile-event1 {
+	position: relative;
+	height: 1360px;
+	line-height: 0px;
+	background: url("../images/bg_mobile_01.png") no-repeat 0 0;
+}
+.sunsoo-mobile-event2 {
+	position: relative;
+	height: 770px;
+	line-height: 0px;
+	background: url("../images/bg_mobile_02.png") no-repeat 0 0;
+}
+.sunsoo-mobile-event-share {
+	position: relative;
+	height: 100px;
+	line-height: 0px;
+	background: url("../images/bg_mobile_tail.png") no-repeat 0 0;
+}
+.sunsoo-mobile-event-btn1-scroll {
+	position: absolute;
+	left: 3px;
+	top: 680px;
+	cursor: pointer;
+}
+#sunsoo-mobile-scroll1 {
+	cursor: pointer;
+}
+.sunsoo-mobile-event-btn2-scroll {
+	position: absolute;
+	left: 302px;
+	top: 680px;
+	cursor: pointer;
+}
+#sunsoo-mobile-scroll2 {
+	cursor: pointer;
+}
+.sunsoo-mobile-event-btn1-check {
+	position: absolute;
+	left: 70px; 
+	top:  483px;
+}
+
+.sunsoo-mobile-event-code {
+	position: absolute;
+	left: 140px;
+	top: 385px;
+	width: 220px;
+	height: 50px;
+	padding: 0;
+	background-color: transparent;
+	text-align: center;
+	color: #4d3524;
+	font-size: 1.0em;
+	border: none;
+	z-index: 1000;
+}
+.sunsoo-mobile-event-btn2-check-area {
+	position: absolute;
+	left: 128px; 
+	top:  380px;
+}
+.sunsoo-mobile-event-btn2-check {
+	position: absolute;
+	left: 360px; 
+	top:  380px;
+}
+.sunsoo-step ul {
+	list-style: none;
+}
+#sunsoo-step1-div {
+	display: block;
+}
+#sunsoo-step2-div {
+	display: none;
+}
+#sunsoo-step3-div {
+	display: none;
+}
+#sunsoo-step1-ul {
+	position: absolute;
+	top: 60px;
+	left: 150px;
+	height: 388px;
+}
+.sunsoo-step1-li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+#sunsoo-step1-li-0 {
+	display: block;
+}
+#btn-step1-left {
+	position: absolute;
+	top: 260px;
+	left: 70px;
+	cursor: pointer;
+}
+#btn-step1-right {
+	position: absolute;
+	top: 260px;
+	left: 500px;
+	cursor: pointer;
+}
+#btn-step-left{
+	position: absolute;
+	top: 450px;
+	left: 200px;
+	cursor: pointer;
+}
+#btn-step-right{
+	position: absolute;
+	top: 450px;
+	left: 320px;
+	cursor: pointer;
+	
+}
+.ss-layer-popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: none;
+}
+.ss-layer-popup-common {
+	position: fixed;
+	margin: auto;
+	width: 100%;
+	height: 50%;
+	top: 25%;
+	text-align: center;
+	z-index: 1200;
+	display: none;
+}
+.ss-share-fb {
+	
+}
+.ss-share-tw {
+	
+}
+.ss-share-ks {
+	
+}
