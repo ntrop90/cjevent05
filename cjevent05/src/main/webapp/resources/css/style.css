@@ -204,6 +204,7 @@ body {
 	top: 330px;
 	left: 70px;
 	cursor: pointer;
+	display: none;
 }
 #btn-step1-right {
 	position: absolute;
@@ -231,6 +232,7 @@ body {
 	top: 330px;
 	left: 365px;
 	cursor: pointer;
+	display: none;
 }
 #btn-step2-right {
 	position: absolute;
@@ -258,6 +260,7 @@ body {
 	top: 330px;
 	left: 670px;
 	cursor: pointer;
+	display: none;
 }
 #btn-step3-right {
 	position: absolute;
@@ -267,6 +270,8 @@ body {
 }
 .ss-layer-popup {
 	position: fixed;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
 	z-index: 1000;
@@ -317,6 +322,24 @@ body {
 	height: 25px;
 	top: 15px;
 	right: 15px;
+	cursor: pointer;
+}
+.ss-info-close {
+	background: url("../images/btnWebEvent1Close.png") no-repeat;
+	position: absolute;
+	width: 28px;
+	height: 28px;
+	top: 12px;
+	right: 12px;
+	cursor: pointer;
+}
+.ss-info2-close {
+	background: url("../images/btnWebEvent2Close.png") no-repeat;
+	position: absolute;
+	width: 28px;
+	height: 28px;
+	top: 12px;
+	right: 12px;
 	cursor: pointer;
 }
 .ss-recipe-close2 {
@@ -392,6 +415,18 @@ body {
 	right: 0;
 	display: none;
 }
+#ss-layer-popup-info2 {
+	background: url("../images/bgWebEvent2Popup.png") no-repeat;
+	position: absolute;
+	width: 607px;
+	height: 579px;
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	display: none;
+}
 .collect-agree {
 	position: absolute;
 	width: 19px;
@@ -436,11 +471,63 @@ body {
 .bridge-disagree-img {
 	display: none;
 }
+.collect2-agree {
+	position: absolute;
+	width: 19px;
+	height: 19px;
+	left: 402px;
+	top: 247px;
+	cursor: pointer;
+}
+.collect2-disagree {
+	position: absolute;
+	width: 19px;
+	height: 19px;
+	left: 464px;
+	top: 247px;
+	cursor: pointer;
+}
+.bridge2-agree {
+	position: absolute;
+	width: 19px;
+	height: 19px;
+	left: 402px;
+	top: 378px;
+	cursor: pointer;
+}
+.bridge2-disagree {
+	position: absolute;
+	width: 19px;
+	height: 19px;
+	left: 464px;
+	top: 378px;
+	cursor: pointer;
+}
+.collect2-agree-img {
+	display: none;
+}
+.collect2-disagree-img {
+	display: none;
+}
+.bridge2-agree-img {
+	display: none;
+}
+.bridge2-disagree-img {
+	display: none;
+}
 .ss-info-confirm {
 	position: absolute;
 	width: 141px;
 	height: 47px;
 	left: 233px;
+	bottom: 22px;
+	cursor: pointer;
+}
+.ss-info2-confirm {
+	position: absolute;
+	width: 165px;
+	height: 47px;
+	left: 221px;
 	bottom: 22px;
 	cursor: pointer;
 }

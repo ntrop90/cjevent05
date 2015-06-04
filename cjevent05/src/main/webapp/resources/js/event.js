@@ -5,7 +5,8 @@ $(function () {
 	var step1Idx = 0; var step2Idx = 0; var step3Idx = 0;
 	var collectAgreeFlag = 0; var bridgeAgreeFlag = 0;
  	$('#btn-step1-left').click(function (event) {
-		if(step1Idx == 0) return false;
+ 		$('#btn-step1-right').css('display', 'block');
+ 		if(step1Idx == 0) return false;
 		else {
 			/* step3 는 무조건 닫아야 함 */
 			step3Idx = 0; step2Idx = 0;
@@ -15,11 +16,17 @@ $(function () {
 			$("#sunsoo-step1-li-" + step1Idx).css('display', 'none'); step1Idx--;
 			$("#sunsoo-step1-li-" + step1Idx).css('display', 'block');
 			/* step2 는 맨 처음 재료 고르는 창만 열어둔다 */
+			$('#btn-step2-left').css('display', 'none');
+			$('#btn-step2-right').css('display', 'block');
+			$('#btn-step3-left').css('display', 'none');
+			$('#btn-step3-right').css('display', 'block');
 			if(step1Idx == 0) {
+				$('#btn-step1-left').css('display', 'none');
 				$('#sunsoo-step2-div').css('display', 'none');
 				$('.sunsoo-step2-li').css('display', 'none');			
 			}
 			else {
+				$('#btn-step2-left').css('display', 'none');
 				$('.sunsoo-step2-li').css('display', 'none');
 				$('#sunsoo-step2-li-0').css('display', 'block');			
 			}
@@ -29,6 +36,10 @@ $(function () {
 	$('#btn-step1-right').click(function (event) {
 		if(step1Idx == 3) return false;
 		else {
+			$('#btn-step2-right').css('display', 'block');
+			$('#btn-step2-left').css('display', 'none');
+			$('#btn-step3-left').css('display', 'none');
+			if(step1Idx == 0) $('#btn-step1-left').css('display', 'block');
 			/* step2는 step3와 관계 없이 맨 처음으로 활성화. step3는 무조건 닫아버린다 */
 			step2Idx = 0; step3Idx = 0;
 			$('#sunsoo-step3-div').css('display', 'none');
@@ -39,6 +50,7 @@ $(function () {
 			$('#sunsoo-step2-div').css('display', 'block');
 			$("#sunsoo-step1-li-" + step1Idx).css('display', 'none'); step1Idx++;
 			$("#sunsoo-step1-li-" + step1Idx).css('display', 'block');
+			if(step1Idx == 3) $('#btn-step1-right').css('display', 'none');
 			return true;
 		}
 	});
@@ -50,12 +62,19 @@ $(function () {
 			$('.sunsoo-step3-li').css('display', 'none');
 			$("#sunsoo-step2-li-" + step2Idx).css('display', 'none'); step2Idx--;
 			$("#sunsoo-step2-li-" + step2Idx).css('display', 'block');
+			$('#btn-step2-left').css('display', 'none');
+			$('#btn-step2-right').css('display', 'block');
+			$('#btn-step3-left').css('display', 'none');
 			return true;
 		}
 	});
 	$('#btn-step2-right').click(function (event) {
+		$('#btn-step3-right').css('display', 'block');
 		if(step2Idx == 1) return false;
 		else {
+			$('#btn-step2-left').css('display', 'block');
+			$('#btn-step2-right').css('display', 'none');
+			$('#btn-step3-left').css('display', 'none');
 			$("#sunsoo-step2-li-" + step2Idx).css('display', 'none'); step2Idx++;
 			$("#sunsoo-step2-li-" + step2Idx).css('display', 'block');
 			$('.sunsoo-step3-li').css('display', 'none');
@@ -65,6 +84,7 @@ $(function () {
 		}
 	});	
 	$('#btn-step3-left').click(function (event) {
+		$('#btn-step3-right').css('display', 'block');
 		if(step3Idx <= 0) {
 			step3Idx = 0;
 			return false;
@@ -72,6 +92,9 @@ $(function () {
 		else {
 			$("#sunsoo-step3-li-" + step1Idx + "-" + step3Idx).css('display', 'none'); step3Idx--;
 			$("#sunsoo-step3-li-" + step1Idx + "-" + step3Idx).css('display', 'block');
+			if(step3Idx == 0) {
+				$('#btn-step3-left').css('display', 'none');
+			}
 			return true;
 		}
 	});
@@ -92,8 +115,20 @@ $(function () {
 			if(step1Idx == 0) {
 				$('#sunsoo-step2-div').css('display', 'block');
 			}
+			if(step3Idx == 0) {
+				$('#btn-step3-left').css('display', 'block');
+			}
 			$("#sunsoo-step3-li-" + step1Idx + "-" + step3Idx).css('display', 'none'); step3Idx++;
 			$("#sunsoo-step3-li-" + step1Idx + "-" + step3Idx).css('display', 'block');
+			if(step3Idx == 7 && step1Idx == 1) {
+				$('#btn-step3-right').css('display', 'none');
+			}
+			else if(step3Idx == 3 && step1Idx == 2) {
+				$('#btn-step3-right').css('display', 'none');
+			}
+			else if(step3Idx == 6 && step1Idx == 3) {
+				$('#btn-step3-right').css('display', 'none');
+			}
 			return true;
 		}
 	});
@@ -164,8 +199,15 @@ $(function () {
 	$('#ss-layer-popup-info-alert4').click(function (event) {
 		$('#ss-layer-popup-info-alert4').css('display', 'none');
 	});	
+	$('#ss-layer-popup-info-alert5').click(function (event) {
+		$('#ss-layer-popup-info-alert5').css('display', 'none');
+	});	
 	$('.ss-recipe-close').click(function (event) {
 		$('#ss-layer-popup-recipe').css('display', 'none');
+		$('.ss-layer-popup').css('display', 'none');
+	});
+	$('.ss-info-close').click(function (event) {
+		$('#ss-layer-popup-info').css('display', 'none');
 		$('.ss-layer-popup').css('display', 'none');
 	});
 	$('.ss-recipe-close2').click(function (event) {
@@ -192,7 +234,41 @@ $(function () {
 		$('.bridge-agree-img').css('display', 'none');
 		$('.bridge-disagree-img').css('display', 'block');
 	});
+	$('.collect2-agree').click(function (event) {
+		collectAgreeFlag = 1;
+		$('.collect-disagree-img').css('display', 'none');
+		$('.collect-agree-img').css('display', 'block');
+	});
+	$('.collect2-disagree').click(function (event) {
+		collectAgreeFlag = 0;
+		$('.collect-agree-img').css('display', 'none');
+		$('.collect-disagree-img').css('display', 'block');
+	});
+	$('.bridge2-agree').click(function (event) {
+		bridgeAgreeFlag = 1;
+		$('.bridge-disagree-img').css('display', 'none');
+		$('.bridge-agree-img').css('display', 'block');
+	});
+	$('.bridge2-disagree').click(function (event) {
+		bridgeAgreeFlag = 0;
+		$('.bridge-agree-img').css('display', 'none');
+		$('.bridge-disagree-img').css('display', 'block');
+	});
 	$('.ss-info-confirm').click(function (event) {
+		var p = $('.ss-layer-popup-info #remote_phone').val();
+		var regExpCheck =/^01([0|1|6|7|8|9]?)-?([0-9]{3,4})-?([0-9]{4})|(010-?[1-9]-?[0-9]{7})$/;
+		if($("#remote_name").val() == "") {
+			$("#ss-layer-popup-info-alert5").css('display', 'block');
+			return false;
+		}
+		if($(".ss-layer-popup-info #remote_phone").val() == "") {
+			$("#ss-layer-popup-info-alert3").css('display', 'block');
+			return false;
+		}
+		if(!regExpCheck.test(p)) {
+			$("#ss-layer-popup-info-alert4").css('display', 'block');
+			return false;
+		}		
 		if(collectAgreeFlag == 0) {
 			$("#ss-layer-popup-info-alert1").css('display', 'block');
 			return false;
@@ -201,10 +277,12 @@ $(function () {
 			$("#ss-layer-popup-info-alert2").css('display', 'block');
 			return false;
 		}
-		if($("#remote_phone").val() == "") {
-			$("#ss-layer-popup-info-alert3").css('display', 'block');
-			return false;
-		}
+	});
+	$('#ss-checkCode').click(function (event) {
+		// ajax 체크 코드
+		//
+		$('.ss-layer-popup').css('display', 'block');
+		$('#ss-layer-popup-info2').css('display', 'block');
 	});
 });
 

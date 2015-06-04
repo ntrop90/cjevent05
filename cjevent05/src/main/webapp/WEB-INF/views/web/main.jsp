@@ -34,6 +34,9 @@
 		<div id="ss-layer-popup-info-alert4" class="ss-layer-popup-common">
 			<p><img src="<c:url value="/resources/images/web_event1_phone_num_alert.png" />"></p>
 		</div>
+		<div id="ss-layer-popup-info-alert5" class="ss-layer-popup-common">
+			<p><img src="<c:url value="/resources/images/web_event1_name_alert.png" />"></p>
+		</div>
 		
 		<!-- 레시피 조합 중입니다 -->
 		<div id="ss-layer-popup-process1" class="ss-layer-popup-common">
@@ -54,6 +57,7 @@
 			<div class="ss-recipe-confirm"></div>
 		</div>
 		<div id="ss-layer-popup-info">
+			<div class="ss-info-close"></div>
 			<input type="text" name="remote_name" id="remote_name" class="sunsoo-web-event-name" placeholder="이름을 입력해주세요" maxlength="4"><!-- 수신번호 다수일때는 이름을 쉼표','로 구분 -->
 			<input type="text" maxlength="11" placeholder="'-'없이 숫자만 입력해주세요"  class="sunsoo-web-event-phone" id="remote_phone" name="remote_phone">
 			<a class="collect-agree"><img class="collect-agree-img" src="<c:url value="/resources/images/btnWebEvent1Radio.png" />"></a>
@@ -61,6 +65,16 @@
 			<a class="bridge-agree"><img class="bridge-agree-img" src="<c:url value="/resources/images/btnWebEvent1Radio.png" />"></a>
 			<a class="bridge-disagree"><img class="bridge-disagree-img" src="<c:url value="/resources/images/btnWebEvent1Radio.png" />"></a>
 			<a class="ss-info-confirm"><img src="<c:url value="/resources/images/btnWebEvent1Confirm.png" />"></a>
+		</div>
+		<div id="ss-layer-popup-info2">
+			<div class="ss-info2-close"></div>
+			<input type="text" name="remote_name" id="remote_name" class="sunsoo-web-event-name" placeholder="이름을 입력해주세요" maxlength="4"><!-- 수신번호 다수일때는 이름을 쉼표','로 구분 -->
+			<input type="text" maxlength="11" placeholder="'-'없이 숫자만 입력해주세요"  class="sunsoo-web-event-phone" id="remote_phone" name="remote_phone">
+			<a class="collect2-agree"><img class="collect2-agree-img" src="<c:url value="/resources/images/btnWebEvent1Radio.png" />"></a>
+			<a class="collect2-disagree"><img class="collect2-disagree-img" src="<c:url value="/resources/images/btnWebEvent1Radio.png" />"></a>
+			<a class="bridge2-agree"><img class="bridge2-agree-img" src="<c:url value="/resources/images/btnWebEvent1Radio.png" />"></a>
+			<a class="bridge2-disagree"><img class="bridge2-disagree-img" src="<c:url value="/resources/images/btnWebEvent1Radio.png" />"></a>
+			<a class="ss-info2-confirm"><img src="<c:url value="/resources/images/btnWebEvent1Confirm.png" />"></a>
 		</div>
 	</div>
 	<form name="SMSFORM" method="post" action="http://www.okmunja.co.kr/Remote/RemoteMms.html">
@@ -189,7 +203,7 @@
 				</div>
 				<div class="sunsoo-web-event2" id="event2">
 					<input type="text" maxlength="10" placeholder="응모번호를 입력하세요"  class="sunsoo-web-event-code">
-					<a href="#" id="checkRecipe" class="sunsoo-web-event-btn2-check" >
+					<a id="ss-checkCode" class="sunsoo-web-event-btn2-check" >
 						<img src="<c:url value="/resources/images/btnWebEvent2.png" />">
 					</a>
 				</div>
