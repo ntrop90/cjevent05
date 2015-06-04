@@ -523,7 +523,6 @@ body {
 	bottom: 22px;
 	cursor: pointer;
 }
-<<<<<<< HEAD
 .ss-info2-confirm {
 	position: absolute;
 	width: 165px;
@@ -532,59 +531,3 @@ body {
 	bottom: 22px;
 	cursor: pointer;
 }
-=======
-
-.sunsoo-mobile-wrapper {
-	position: relative;
-	min-width: 980px;
-	min-height: 100%;
-	margin: 0 auto;
-}
-.sunsoo-mobile-contents {
-	position: relative;
-	width: 980px;
-	margin: 0 auto;
-}
-.sunsoo-mobile-event-intro {
-	position: relative;
-	height: 696px;
-	line-height: 0px;
-	background: url("../images/bg_mobile_intro.png") no-repeat 0 0;
-}
-.sunsoo-mobile-event1 {
-	position: relative;
-	height: 1290px;
-	line-height: 0px;
-	background: url("../images/bg_mobile_01.png") no-repeat 0 0;
-}
-.sunsoo-mobile-event2 {
-	position: relative;
-	height: 568px;
-	line-height: 0px;
-	background: url("../images/bg_mobile_02.png") no-repeat 0 0;
-}
-.sunsoo-mobile-event-share {
-	position: relative;
-	height: 117px;
-	line-height: 0px;
-	background: url("../images/bg_mobile_tail.png") no-repeat 0 0;
-}
-.sunsoo-mobile-event-btn1-scroll {
-	position: absolute;
-	left: 177px;
-	top: 636px;
-	cursor: pointer;
-}
-#sunsoo-mobile-scroll1 {
-	cursor: pointer;
-}
-.sunsoo-mobile-event-btn2-scroll {
-	position: absolute;
-	left: 509px;
-	top: 636px;
-	cursor: pointer;
-}
-#sunsoo-mobile-scroll2 {
-	cursor: pointer;
-}
->>>>>>> branch 'master' of https://github.com/ntrop90/cjevent05.git
