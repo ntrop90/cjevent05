@@ -37,15 +37,15 @@ public class MainController {
 	public String webResult(@ModelAttribute EventModel eventModel) {
 		// 사용자의 휴대폰 번호를 SHA-256으로 암호화
 		String remote_phone = encryptPhone(eventModel.getRemote_phone());
-		
+		String remote_name = eventModel.getRemote_name();
 		// 이벤트 응모자의 사전 응모 여부 검사 후 트래킹까지 완료하는 로직
 		if(eventService.checkExistingUser(remote_phone)) {
 			// 이미 응모한 사용자의 경우
-			eventService.entryWebEvent1Again(remote_phone);
+			eventService.entryWebEvent1Again(remote_phone, remote_name);
 		}
 		else {
 			// 처음 응모하는 사용자의 경우
-			eventService.entryWebEvent1Newly(remote_phone);
+			eventService.entryWebEvent1Newly(remote_phone, remote_name);
 		}
 		
 		// 경품 추첨 후 문자 발송을 위함
@@ -126,6 +126,7 @@ public class MainController {
 				}
 			}
 		}
+		
 		return "web/result";
 	}
 	
@@ -225,15 +226,15 @@ public class MainController {
 	public String mResult(@ModelAttribute EventModel eventModel) {
 		// 사용자의 휴대폰 번호를 SHA-256으로 암호화
 		String remote_phone = encryptPhone(eventModel.getRemote_phone());
-		
+		String remote_name = eventModel.getRemote_name();
 		// 이벤트 응모자의 사전 응모 여부 검사 후 트래킹까지 완료하는 로직
 		if(eventService.checkExistingUser(remote_phone)) {
 			// 이미 응모한 사용자의 경우
-			eventService.entryMobileEvent1Again(remote_phone);
+			eventService.entryMobileEvent1Again(remote_phone, remote_name);
 		}
 		else {
 			// 처음 응모하는 사용자의 경우
-			eventService.entryMobileEvent1Newly(remote_phone);
+			eventService.entryMobileEvent1Newly(remote_phone, remote_name);
 		}
 		
 		// 경품 추첨 후 문자 발송을 위함

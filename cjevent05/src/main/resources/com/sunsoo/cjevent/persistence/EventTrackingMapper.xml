@@ -13,7 +13,7 @@
     <update id="updateTrackingEvent1CountAndDist">
     UPDATE SS_EVENT_TRACKING
     SET
-    	EVENT1_CNT = EVENT1_CNT + 1, EVNET1_DIST = EVENT1_DIST + 1
+    	EVENT1_CNT = EVENT1_CNT + 1, EVENT1_DIST = EVENT1_DIST + 1
 	WHERE
 		REG_DATE = CONVERT(DATE, GETDATE())
     </update>

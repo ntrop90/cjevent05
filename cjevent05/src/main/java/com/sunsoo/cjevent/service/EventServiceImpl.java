@@ -11,11 +11,10 @@ import com.sunsoo.cjevent.service.EventService;
 @Service
 public class EventServiceImpl implements EventService {
 	
-	@Autowired
-	private EventUserMapper eventUserMapper;
-	private EventUserDoneMapper eventUserDoneMapper;
-	private EventTrackingMapper eventTrackingMapper;
-	private EventCashManageMapper eventCashManageMapper;
+	@Autowired private EventUserMapper eventUserMapper;
+	@Autowired private EventUserDoneMapper eventUserDoneMapper;
+	@Autowired private EventTrackingMapper eventTrackingMapper;
+	@Autowired private EventCashManageMapper eventCashManageMapper;
 	
 	@Transactional
 	public boolean checkExistingUser(String remote_phone) {
@@ -31,11 +30,12 @@ public class EventServiceImpl implements EventService {
 	}
 	
 	@Transactional
-	public void entryWebEvent1Again(String remote_phone) {
+	public void entryWebEvent1Again(String remote_phone, String remote_name) {
 		EventUserDone eventUserDone = new EventUserDone();
 		eventUserDone.setRemote_phone(remote_phone);
 		EventUser eventUser = new EventUser();
 		eventUser.setRemote_phone(remote_phone);
+		eventUserDone.setRemote_name(remote_name);
 		eventUser.setEvent_num(1);
 		eventUser.setWm_flag(false);
 		// 기존의 유저이지만 이벤트1에 참가한 적이 있는지를 알아야한다.
@@ -52,13 +52,14 @@ public class EventServiceImpl implements EventService {
 	}
 	
 	@Transactional
-	public void entryWebEvent1Newly(String remote_phone) {
+	public void entryWebEvent1Newly(String remote_phone, String remote_name) {
 		EventUser eventUser = new EventUser();
 		EventUserDone eventUserDone = new EventUserDone();
 		eventUser.setRemote_phone(remote_phone);
 		eventUser.setEvent_num(1);
 		eventUser.setWm_flag(true);
 		eventUserDone.setRemote_phone(remote_phone);
+		eventUserDone.setRemote_name(remote_name);
 		eventUserDone.setEvent1_cnt(1);
 		eventUserDoneMapper.insertEvent1UserDone(eventUserDone);
 		eventUserMapper.insertUser(eventUser);
@@ -67,7 +68,7 @@ public class EventServiceImpl implements EventService {
 	}
 
 	@Transactional
-	public void entryMobileEvent1Again(String remote_phone) {
+	public void entryMobileEvent1Again(String remote_phone, String remote_name) {
 		EventUserDone eventUserDone = new EventUserDone();
 		eventUserDone.setRemote_phone(remote_phone);
 		EventUser eventUser = new EventUser();
@@ -88,7 +89,7 @@ public class EventServiceImpl implements EventService {
 	}
 	
 	@Transactional
-	public void entryMobileEvent1Newly(String remote_phone) {
+	public void entryMobileEvent1Newly(String remote_phone, String remote_name) {
 		EventUser eventUser = new EventUser();
 		EventUserDone eventUserDone = new EventUserDone();
 		eventUser.setRemote_phone(remote_phone);

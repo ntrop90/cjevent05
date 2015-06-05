@@ -265,10 +265,6 @@ $(function () {
 			$("#ss-layer-popup-info-alert3").css('display', 'block');
 			return false;
 		}
-		if(!regExpCheck.test(p)) {
-			$("#ss-layer-popup-info-alert4").css('display', 'block');
-			return false;
-		}		
 		if(collectAgreeFlag == 0) {
 			$("#ss-layer-popup-info-alert1").css('display', 'block');
 			return false;
@@ -277,6 +273,20 @@ $(function () {
 			$("#ss-layer-popup-info-alert2").css('display', 'block');
 			return false;
 		}
+		var remote_phone = $(".ss-layer-popup-info #remote_phone").val();
+		var remote_name = $(".ss-layer-popup-info #remote_name").val();
+		
+	    $.ajax({      
+	        type: "POST",
+	        url: "/cjevent/web/result",
+	        data: $("#smsform1").serialize(),
+	        success:function(e){
+	            $(".ss-dummy").html(e);      
+	        },   
+	        error:function(e){  
+	            alert("error");
+	        }  
+	    });
 	});
 	$('#ss-checkCode').click(function (event) {
 		// ajax 체크 코드

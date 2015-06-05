@@ -3,6 +3,7 @@ package com.sunsoo.cjevent.domain;
 public class EventUserDone {
 	
 	private String remote_phone;
+	private String remote_name;
 	private int event1_cnt;
 	private int event2_cnt;
 	private boolean done_mms;
@@ -21,6 +22,12 @@ public class EventUserDone {
 	}
 	public void setRemote_phone(String remote_phone) {
 		this.remote_phone = remote_phone;
+	}
+	public String getRemote_name() {
+		return remote_name;
+	}
+	public void setRemote_name(String remote_name) {
+		this.remote_name = remote_name;
 	}
 	public int getEvent1_cnt() {
 		return event1_cnt;

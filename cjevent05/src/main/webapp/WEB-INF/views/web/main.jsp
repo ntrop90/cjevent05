@@ -11,6 +11,7 @@
 <title>Web Main</title>
 </head>
 <body>
+	<div class="ss-dummy" id="ss-dummy"></div>
 	<div class="ss-layer-popup">
 		<!-- 레시피 예외 처리용 alert window -->
 		<div id="ss-layer-popup-game-alert1" class="ss-layer-popup-common">
@@ -57,6 +58,7 @@
 			<div class="ss-recipe-confirm"></div>
 		</div>
 		<div id="ss-layer-popup-info">
+			<form id="smsform1">
 			<div class="ss-info-close"></div>
 			<input type="text" name="remote_name" id="remote_name" class="sunsoo-web-event-name" placeholder="이름을 입력해주세요" maxlength="4"><!-- 수신번호 다수일때는 이름을 쉼표','로 구분 -->
 			<input type="text" maxlength="11" placeholder="'-'없이 숫자만 입력해주세요"  class="sunsoo-web-event-phone" id="remote_phone" name="remote_phone">
@@ -65,6 +67,7 @@
 			<a class="bridge-agree"><img class="bridge-agree-img" src="<c:url value="/resources/images/btnWebEvent1Radio.png" />"></a>
 			<a class="bridge-disagree"><img class="bridge-disagree-img" src="<c:url value="/resources/images/btnWebEvent1Radio.png" />"></a>
 			<a class="ss-info-confirm"><img src="<c:url value="/resources/images/btnWebEvent1Confirm.png" />"></a>
+			</form>
 		</div>
 		<div id="ss-layer-popup-info2">
 			<div class="ss-info2-close"></div>

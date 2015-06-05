@@ -13,9 +13,9 @@
     
     <insert id="insertEvent1UserDone" parameterType="EventUserDone">
     INSERT INTO SS_EVENT_USER_DONE
-    (REMOTE_PHONE, EVENT1_CNT)
+    (REMOTE_PHONE, REMOTE_NAME, EVENT1_CNT)
     VALUES
-    (#{remote_phone}, #{event1_cnt})
+    (#{remote_phone}, #{remote_name}, #{event1_cnt})
     </insert>
 
     <update id="updateEvent1UserDone" parameterType="EventUserDone">
